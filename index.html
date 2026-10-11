@@ -9,6 +9,10 @@
   <!-- Bootstrap 5 + Font -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- =========================================================
+           Add ONCE in <head>  (Font Awesome icons)
+      ========================================================= -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- =========================================================
      1) HEADER STYLE
@@ -475,25 +479,282 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <!-- =========================================================
-       Add ONCE in <head>  (Font Awesome icons)
+       10) WHY CHOOSE US - STYLE  (uses your existing :root colors)
   ========================================================= -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    .why {
+      background: var(--ink);
+      color: var(--text);
+      overflow: hidden;
+      border-top: 1px solid rgba(255, 255, 255, .06);
+      border-bottom: 1px solid rgba(255, 255, 255, .06);
+    }
+
+    /* image | content | features */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 46% minmax(0, 1fr) minmax(220px, 300px);
+      align-items: center;
+      min-height: 420px;
+    }
+
+    /* left image, fades into the dark background */
+    .why-media {
+      position: relative;
+      align-self: stretch;
+      min-height: 420px;
+    }
+
+    .why-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .why-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(12, 10, 8, 0) 45%, var(--ink) 100%);
+    }
+
+    /* middle content */
+    .why-content {
+      padding: 50px 30px 50px 10px;
+      position: relative;
+      z-index: 2;
+      margin-left: -60px;
+    }
+
+    .why-eyebrow {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+    }
+
+    .why-title {
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: #dbe6f5;
+      margin: 0 0 18px;
+    }
+
+    .why-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(244, 239, 232, .75);
+      max-width: 440px;
+      margin: 0 0 26px;
+    }
+
+    .why-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 26px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+      color: #1a1208;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(233, 168, 79, .25);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .why-btn i {
+      transition: transform .25s;
+    }
+
+    .why-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(233, 168, 79, .4);
+      color: #1a1208;
+    }
+
+    .why-btn:hover i {
+      transform: translateX(4px);
+    }
+
+    /* right feature list */
+    .why-features {
+      list-style: none;
+      margin: 0;
+      padding: 40px 40px 40px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .why-feature {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .why-icon {
+      flex: 0 0 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 17px;
+      box-shadow: 0 0 18px rgba(233, 168, 79, .15);
+      transition: background .25s, color .25s;
+    }
+
+    .why-feature:hover .why-icon {
+      background: var(--gold);
+      color: #1a1208;
+    }
+
+    .why-feature h3 {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin: 0 0 4px;
+      color: var(--text);
+    }
+
+    .why-feature p {
+      font-size: 12px;
+      line-height: 1.5;
+      margin: 0;
+      color: rgba(244, 239, 232, .6);
+    }
+
+    /* tablet: image on top, content + features below */
+    @media (max-width: 991.98px) {
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .why-media {
+        grid-column: 1 / -1;
+        min-height: 320px;
+      }
+
+      .why-media::after {
+        background: linear-gradient(to bottom, rgba(12, 10, 8, 0) 50%, var(--ink) 100%);
+      }
+
+      .why-content {
+        margin-left: 0;
+        padding: 10px 24px 40px;
+      }
+
+      .why-features {
+        padding: 10px 24px 40px 0;
+      }
+    }
+
+    /* mobile: everything stacked */
+    @media (max-width: 575.98px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-media {
+        min-height: 260px;
+      }
+
+      .why-content {
+        padding: 10px 20px 20px;
+      }
+
+      .why-features {
+        padding: 0 20px 40px;
+      }
+    }
+  </style>
+
+  <!-- =========================================================
+       11) WHY CHOOSE US - SECTION TAG
+  ========================================================= -->
+  <section class="why" id="why">
+    <div class="why-grid">
+
+      <!-- LEFT IMAGE -->
+      <div class="why-media">
+        <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&q=70&w=1100&h=900"
+          alt="Luxury dining and kitchen interior with warm lighting">
+      </div>
+
+      <!-- MIDDLE CONTENT -->
+      <div class="why-content">
+        <p class="why-eyebrow">Why Choose Suntek Designs?</p>
+        <h2 class="why-title">Crafted with Precision.<br>Built for Your Vision.</h2>
+        <p class="why-text">
+          We combine creativity, quality craftsmanship and advanced technology to deliver spaces that are
+          not only beautiful but also functional and durable.
+        </p>
+        <a href="#about" class="why-btn">Learn More About Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <!-- RIGHT FEATURES -->
+      <ul class="why-features">
+        <li class="why-feature">
+          <span class="why-icon"><i class="fa-solid fa-lightbulb"></i></span>
+          <div>
+            <h3>Innovative Design Approach</h3>
+            <p>Fresh ideas, timeless style.</p>
+          </div>
+        </li>
+        <li class="why-feature">
+          <span class="why-icon"><i class="fa-solid fa-leaf"></i></span>
+          <div>
+            <h3>Sustainable Solutions</h3>
+            <p>Better for you, better for tomorrow.</p>
+          </div>
+        </li>
+        <li class="why-feature">
+          <span class="why-icon"><i class="fa-solid fa-handshake"></i></span>
+          <div>
+            <h3>Client-Centric Process</h3>
+            <p>Your vision, our priority.</p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <!-- =========================================================
@@ -803,7 +1064,7 @@
 ========================================================= -->
   <style>
     .showcase {
-      padding: 90px 0;
+      padding: 40px 0;
       background: var(--ink);
     }
 
@@ -825,7 +1086,6 @@
       margin: 0;
     }
 
-    /* 3-column grid: list | image | list */
     .showcase-grid {
       display: grid;
       grid-template-columns: 1fr minmax(300px, 440px) 1fr;
@@ -846,34 +1106,59 @@
       padding: 0;
     }
 
-    /* list buttons */
+    /* list buttons: icon + (title / description) */
     .showcase-item {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       width: 100%;
-      padding: 16px 0;
+      padding: 20px 0;
       background: none;
       border: 0;
       border-bottom: 1px solid rgba(255, 255, 255, .1);
       color: rgba(244, 239, 232, .65);
       font-family: inherit;
-      font-size: 18px;
       text-align: left;
       cursor: pointer;
-      transition: color .25s, padding .25s, border-color .25s;
+      transition: color .25s, border-color .25s;
     }
 
-    .showcase-item::before {
-      content: "";
-      width: 0;
-      height: 2px;
-      background: var(--gold);
-      transition: width .25s;
+    /* icon box */
+    .showcase-icon {
+      flex: 0 0 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      color: var(--gold);
+      border: 1px solid rgba(233, 168, 79, .45);
+      border-radius: 12px;
+      transition: background .25s, color .25s, transform .25s;
+    }
+
+    .showcase-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .showcase-text strong {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .showcase-text small {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(244, 239, 232, .5);
     }
 
     .showcase-item:hover {
       color: var(--text);
+    }
+
+    .showcase-item:hover .showcase-icon {
+      transform: translateY(-2px);
     }
 
     .showcase-item.active {
@@ -881,9 +1166,13 @@
       border-bottom-color: var(--gold);
     }
 
-    .showcase-item.active::before,
-    .showcase-item:hover::before {
-      width: 22px;
+    .showcase-item.active .showcase-icon {
+      background: var(--gold);
+      color: #1a1208;
+    }
+
+    .showcase-item.active .showcase-text small {
+      color: rgba(244, 239, 232, .7);
     }
 
     .showcase-item:focus-visible {
@@ -891,7 +1180,7 @@
       outline-offset: 3px;
     }
 
-    /* left list is mirrored: text aligns toward the image */
+    /* left list is mirrored: icon + text sit toward the image */
     .showcase-left {
       text-align: right;
     }
@@ -912,7 +1201,6 @@
       background: #17120d;
     }
 
-    /* two stacked images that crossfade */
     .showcase-frame img {
       position: absolute;
       inset: 0;
@@ -931,6 +1219,13 @@
     }
 
     .showcase-caption {
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 50px 22px 20px;
+      background: linear-gradient(to top, rgba(0, 0, 0, .85), transparent);
       transition: opacity .3s ease;
     }
 
@@ -938,18 +1233,19 @@
       opacity: 0;
     }
 
-    .showcase-caption {
-      z-index: 2;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 50px 22px 20px;
+    .showcase-caption .cap-title {
+      display: block;
       font-size: 20px;
-      background: linear-gradient(to top, rgba(0, 0, 0, .85), transparent);
     }
 
-    /* tablet: image on top, lists side by side */
+    .showcase-caption .cap-desc {
+      display: block;
+      font-size: 13px;
+      margin-top: 4px;
+      color: rgba(244, 239, 232, .75);
+    }
+
+    /* tablet */
     @media (max-width: 991.98px) {
       .showcase {
         padding: 70px 0;
@@ -978,7 +1274,7 @@
       }
     }
 
-    /* mobile: lists stack under the image */
+    /* mobile */
     @media (max-width: 575.98px) {
       .showcase-grid {
         grid-template-columns: 1fr;
@@ -986,8 +1282,11 @@
       }
 
       .showcase-item {
+        padding: 16px 0;
+      }
+
+      .showcase-text strong {
         font-size: 16px;
-        padding: 14px 0;
       }
     }
   </style>
@@ -999,31 +1298,49 @@
     <div class="container">
 
       <div class="showcase-head">
-        <p class="showcase-eyebrow">OUR WORK</p>
-        <h2 class="showcase-title">Spaces We Design</h2>
+        <p class="showcase-eyebrow">Since 2007</p>
+        <h2 class="showcase-title">Why Choose Us</h2>
       </div>
 
       <div class="showcase-grid">
 
-        <!-- LEFT LIST (5) -->
+        <!-- LEFT LIST (3) -->
         <div class="showcase-left">
           <p class="showcase-group-label">HOMES</p>
           <ul class="showcase-list">
-            <li><button type="button" class="showcase-item active" data-title="Living Room"
-                data-img="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?auto=format&fit=crop&q=70&w=900&h=900">Living
-                Room</button></li>
-            <li><button type="button" class="showcase-item" data-title="Fireplace Lounge"
-                data-img="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=70&w=900&h=900">Fireplace
-                Lounge</button></li>
-            <li><button type="button" class="showcase-item" data-title="Dining Area"
-                data-img="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&q=70&w=900&h=900">Dining
-                Area</button></li>
-            <li><button type="button" class="showcase-item" data-title="City Apartment"
-                data-img="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&q=70&w=900&h=900">City
-                Apartment</button></li>
-            <li><button type="button" class="showcase-item" data-title="Family Hall"
-                data-img="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=70&w=900&h=900">Family
-                Hall</button></li>
+            <li>
+              <button type="button" class="showcase-item active" data-title="Living Room"
+                data-desc="Warm, welcoming spaces made for everyday comfort."
+                data-img="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?auto=format&fit=crop&q=70&w=900&h=900">
+                <span class="showcase-icon"><i class="fa-solid fa-couch"></i></span>
+                <span class="showcase-text">
+                  <strong>Living Room</strong>
+                  <small>Warm, welcoming spaces made for everyday comfort.</small>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="showcase-item" data-title="Fireplace Lounge"
+                data-desc="Cozy corners built around a glowing focal point."
+                data-img="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=70&w=900&h=900">
+                <span class="showcase-icon"><i class="fa-solid fa-fire"></i></span>
+                <span class="showcase-text">
+                  <strong>Fireplace Lounge</strong>
+                  <small>Cozy corners built around a glowing focal point.</small>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="showcase-item" data-title="Dining Area"
+                data-desc="Elegant layouts for meals and memorable gatherings."
+                data-img="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&q=70&w=900&h=900">
+                <span class="showcase-icon"><i class="fa-solid fa-utensils"></i></span>
+                <span class="showcase-text">
+                  <strong>Dining Area</strong>
+                  <small>Elegant layouts for meals and memorable gatherings.</small>
+                </span>
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -1034,29 +1351,50 @@
               src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?auto=format&fit=crop&q=70&w=900&h=900"
               alt="Living Room">
             <img class="showcase-slide" id="showcaseImgB" alt="">
-            <div class="showcase-caption" id="showcaseCaption">Living Room</div>
+            <div class="showcase-caption" id="showcaseCaption">
+              <span class="cap-title" id="capTitle">Living Room</span>
+              <span class="cap-desc" id="capDesc">Warm, welcoming spaces made for everyday comfort.</span>
+            </div>
           </div>
         </div>
 
-        <!-- RIGHT LIST (5) -->
+        <!-- RIGHT LIST (3) -->
         <div class="showcase-right">
           <p class="showcase-group-label">WORKSPACES</p>
           <ul class="showcase-list">
-            <li><button type="button" class="showcase-item" data-title="Glass Offices"
-                data-img="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=70&w=900&h=900">Glass
-                Offices</button></li>
-            <li><button type="button" class="showcase-item" data-title="Meeting Rooms"
-                data-img="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=70&w=900&h=900">Meeting
-                Rooms</button></li>
-            <li><button type="button" class="showcase-item" data-title="Cafe &amp; Lounge"
-                data-img="https://images.unsplash.com/photo-1579487785973-74d2ca7abdd5?auto=format&fit=crop&q=70&w=900&h=900">Cafe
-                &amp; Lounge</button></li>
-            <li><button type="button" class="showcase-item" data-title="Open Workspace"
-                data-img="https://images.unsplash.com/photo-1549637642-90187f64f420?auto=format&fit=crop&q=70&w=900&h=900">Open
-                Workspace</button></li>
-            <li><button type="button" class="showcase-item" data-title="Work Studios"
-                data-img="https://images.unsplash.com/photo-1698680746129-89aea8bb512d?auto=format&fit=crop&q=70&w=900&h=900">Work
-                Studios</button></li>
+            <li>
+              <button type="button" class="showcase-item" data-title="Glass Offices"
+                data-desc="Bright, open offices that feel modern and transparent."
+                data-img="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=70&w=900&h=900">
+                <span class="showcase-icon"><i class="fa-solid fa-building"></i></span>
+                <span class="showcase-text">
+                  <strong>Glass Offices</strong>
+                  <small>Bright, open offices that feel modern and transparent.</small>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="showcase-item" data-title="Meeting Rooms"
+                data-desc="Focused rooms designed for ideas and clear decisions."
+                data-img="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=70&w=900&h=900">
+                <span class="showcase-icon"><i class="fa-solid fa-people-group"></i></span>
+                <span class="showcase-text">
+                  <strong>Meeting Rooms</strong>
+                  <small>Focused rooms designed for ideas and clear decisions.</small>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="showcase-item" data-title="Cafe &amp; Lounge"
+                data-desc="Relaxed break-out zones to recharge and connect."
+                data-img="https://images.unsplash.com/photo-1579487785973-74d2ca7abdd5?auto=format&fit=crop&q=70&w=900&h=900">
+                <span class="showcase-icon"><i class="fa-solid fa-mug-hot"></i></span>
+                <span class="showcase-text">
+                  <strong>Cafe &amp; Lounge</strong>
+                  <small>Relaxed break-out zones to recharge and connect.</small>
+                </span>
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -1065,17 +1403,16 @@
   </section>
 
 
-  <!-- 9) SHOWCASE SCRIPT (jQuery) - add after the jQuery  -->
-
-
+  <!-- 9) SHOWCASE SCRIPT -->
   <script>
-
     document.addEventListener('DOMContentLoaded', function () {
       var items = document.querySelectorAll('.showcase-item');
       var slides = [document.getElementById('showcaseImgA'), document.getElementById('showcaseImgB')];
       var caption = document.getElementById('showcaseCaption');
-      var current = 0;     // index of the visible slide
-      var token = 0;       // ignores outdated loads when clicking fast
+      var capTitle = document.getElementById('capTitle');
+      var capDesc = document.getElementById('capDesc');
+      var current = 0;
+      var token = 0;
 
       // preload all images
       items.forEach(function (b) { new Image().src = b.dataset.img; });
@@ -1088,7 +1425,7 @@
           btn.classList.add('active');
           btn.setAttribute('aria-pressed', 'true');
 
-          var src = btn.dataset.img, title = btn.dataset.title, myToken = ++token;
+          var src = btn.dataset.img, title = btn.dataset.title, desc = btn.dataset.desc, myToken = ++token;
           var next = 1 - current;
           var loader = new Image();
 
@@ -1096,7 +1433,6 @@
             if (myToken !== token) return;
             slides[next].src = src;
             slides[next].alt = title;
-            // next frame -> so the browser animates the change
             requestAnimationFrame(function () {
               slides[next].classList.add('is-on');
               slides[current].classList.remove('is-on');
@@ -1104,7 +1440,8 @@
             });
             caption.classList.add('is-fading');
             setTimeout(function () {
-              caption.textContent = title;
+              capTitle.textContent = title;
+              capDesc.textContent = desc;
               caption.classList.remove('is-fading');
             }, 300);
           };
