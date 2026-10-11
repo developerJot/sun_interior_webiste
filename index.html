@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suntek Designs</title>
+
+  <!-- Bootstrap 5 + Font -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- =========================================================
+     1) HEADER STYLE
+========================================================= -->
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    :root {
+      --gold: #e9a84f;
+      --gold-soft: #f3c982;
+      --ink: #0c0a08;
+      --text: #f4efe8;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--ink);
+      color: var(--text);
+      margin: 0;
+    }
+
+    .site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 50;
+      padding: 18px 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .75), transparent);
+    }
+
+    .site-header .navbar {
+      padding: 0;
+    }
+
+    /* Logo */
+    .brand {
+      text-decoration: none;
+      line-height: 1;
+      display: inline-block;
+    }
+
+    .brand-main {
+      display: block;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--text);
+    }
+
+    .brand-main b {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .brand-sub {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 6px;
+      color: var(--gold);
+      text-align: center;
+      margin-top: 3px;
+    }
+
+    /* Links */
+    .site-header .nav-link {
+      color: var(--text);
+      font-size: 15px;
+      padding: 8px 4px;
+      margin: 0 14px;
+      border-bottom: 2px solid transparent;
+      transition: color .2s;
+    }
+
+    .site-header .nav-link:hover,
+    .site-header .nav-link.active {
+      color: var(--gold);
+    }
+
+    .site-header .nav-link.active {
+      border-bottom-color: var(--gold);
+    }
+
+    /* Services dropdown */
+    .site-header .dropdown-menu {
+      background: rgba(18, 14, 10, .97);
+      border: 1px solid rgba(233, 168, 79, .3);
+      border-radius: 10px;
+      padding: 8px;
+      min-width: 220px;
+      margin-top: -7px;
+    }
+
+    .site-header .dropdown-item {
+      color: var(--text);
+      font-size: 14px;
+      padding: 9px 14px;
+      border-radius: 6px;
+    }
+
+    .site-header .dropdown-item:hover {
+      background: rgba(233, 168, 79, .15);
+      color: var(--gold);
+    }
+
+    /* Quote button */
+    .btn-quote {
+      color: var(--text);
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      padding: 9px 24px;
+      font-size: 15px;
+      background: transparent;
+      transition: .25s;
+    }
+
+    .btn-quote:hover {
+      background: var(--gold);
+      color: #1a1209;
+    }
+
+    /* Toggler */
+    .navbar-toggler {
+      border: 1px solid var(--gold);
+      padding: 6px 10px;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    /* Desktop: open dropdown on hover */
+    @media (min-width:992px) {
+      .site-header .dropdown:hover>.dropdown-menu {
+        display: block;
+      }
+    }
+
+    /* Mobile / tablet: collapsed menu panel */
+    @media (max-width:991.98px) {
+      .site-header {
+        background: rgba(0, 0, 0, .85);
+        padding: 12px 0;
+      }
+
+      .site-header .navbar-collapse {
+        background: rgba(14, 11, 8, .98);
+        margin-top: 14px;
+        padding: 10px 18px 20px;
+        border: 1px solid rgba(233, 168, 79, .25);
+        border-radius: 12px;
+      }
+
+      .site-header .nav-link {
+        margin: 0;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+      }
+
+      .site-header .nav-link.active {
+        border-bottom-color: rgba(255, 255, 255, .08);
+      }
+
+      .site-header .dropdown-menu {
+        background: transparent;
+        border: 0;
+        padding: 0 0 0 12px;
+        margin: 0;
+      }
+
+      .btn-quote {
+        display: block;
+        text-align: center;
+        margin-top: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+     2) HEADER TAG
+========================================================= -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+
+        <a class="brand" href="#">
+          <span class="brand-main">SUN<b>TEK</b></span>
+          <span class="brand-sub">DESIGNS</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+
+            <!-- Services dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDrop" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Services</a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDrop">
+                <li><a class="dropdown-item" href="#">Residential Interiors</a></li>
+                <li><a class="dropdown-item" href="#">Office Interiors</a></li>
+                <li><a class="dropdown-item" href="#">Commercial Spaces</a></li>
+                <li><a class="dropdown-item" href="#">Modular Kitchens</a></li>
+                <li><a class="dropdown-item" href="#">Fit-out Solutions</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+          </ul>
+
+          <a href="#" class="btn-quote">Get a Quote &rarr;</a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- =========================================================
+     3) HERO STYLE
+========================================================= -->
+  <style>
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--ink);
+    }
+
+    /* background video */
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    /* dark overlay so text stays readable */
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(90deg, rgba(0, 0, 0, .88) 0%, rgba(0, 0, 0, .55) 45%, rgba(0, 0, 0, .15) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 140px 0 90px;
+      max-width: 560px;
+    }
+
+    .hero-eyebrow {
+      font-size: 14px;
+      letter-spacing: 3px;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-size: clamp(40px, 6vw, 68px);
+      font-weight: 400;
+      line-height: 1.05;
+      margin: 0 0 22px;
+    }
+
+    .hero-title span {
+      display: block;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .hero-text {
+      font-size: 16px;
+      line-height: 1.65;
+      color: rgba(244, 239, 232, .85);
+      margin-bottom: 32px;
+      max-width: 470px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero {
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+      color: #1a1209;
+      font-weight: 500;
+      border: 0;
+      border-radius: 40px;
+      padding: 14px 30px;
+      text-decoration: none;
+      transition: .25s;
+    }
+
+    .btn-hero:hover {
+      filter: brightness(1.08);
+      color: #1a1209;
+      transform: translateY(-2px);
+    }
+
+    .btn-story {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.25;
+    }
+
+    .play-ring {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    .btn-story:hover .play-ring {
+      background: var(--gold);
+      color: #1a1209;
+    }
+
+    @media (max-width:767.98px) {
+      .hero {
+        min-height: 92vh;
+      }
+
+      .hero::after {
+        background: rgba(0, 0, 0, .68);
+      }
+
+      .hero-content {
+        padding: 120px 0 60px;
+      }
+
+      .hero-text {
+        font-size: 15px;
+      }
+
+      .btn-hero {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .hero-video {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- =========================================================
+     4) HERO SECTION TAG
+========================================================= -->
+  <section class="hero" id="home">
+
+    <!-- Replace video/hero.mp4 and poster with your own files -->
+    <video class="hero-video" autoplay muted loop playsinline poster="img/hero-poster.jpg">
+      <source src="./assets/hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-eyebrow">INTERIOR DESIGN &amp; FIT-OUT SOLUTIONS</p>
+        <h1 class="hero-title">Beautiful Spaces. <span>Better Living.</span></h1>
+        <p class="hero-text">Stylish, functional interiors for homes, offices and commercial spaces.</p>
+
+        <div class="hero-actions">
+          <a href="#services" class="btn-hero">Explore Our Services &rarr;</a>
+          <a href="#story" class="btn-story">
+            <span class="play-ring">&#9654;</span>
+            <span>Watch Our<br>Design Story</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- =========================================================
+       Add ONCE in <head>  (Font Awesome icons)
+  ========================================================= -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- =========================================================
+       5) SERVICES STYLE
+  ========================================================= -->
+  <style>
+    .services {
+      padding: 90px 0;
+      background: var(--ink);
+      overflow: hidden;
+    }
+
+    /* ---------- text ---------- */
+    .services-text-box {
+      max-width: 640px;
+    }
+
+    .services-eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .services-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .services-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(244, 239, 232, .8);
+      margin-bottom: 28px;
+    }
+
+    .services-text strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* arrow in button slides on hover (uses .btn-hero from the hero) */
+    .btn-hero i {
+      margin-left: 8px;
+      transition: transform .25s;
+    }
+
+    .btn-hero:hover i {
+      transform: translateX(5px);
+    }
+
+    /* ---------- cards grid ---------- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .service-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 340px;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 14px;
+      overflow: hidden;
+      color: var(--text);
+      transition: transform .3s, border-color .3s, box-shadow .3s;
+    }
+
+    .service-card-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(8, 6, 4, .92) 72%);
+    }
+
+    .service-body {
+      position: relative;
+      z-index: 2;
+      padding-right: 40px;
+      /* space for arrow */
+    }
+
+    .service-icon {
+      font-size: 24px;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .service-card h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 0 6px;
+    }
+
+    .service-card p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(244, 239, 232, .75);
+      margin: 0;
+    }
+
+    .service-arrow {
+      position: absolute;
+      z-index: 2;
+      right: 16px;
+      bottom: 18px;
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: 12px;
+      transition: .25s;
+    }
+
+    /* hover */
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 18px 40px rgba(233, 168, 79, .18);
+      color: var(--text);
+    }
+
+    .service-card:hover .service-card-bg {
+      transform: scale(1.08);
+    }
+
+    .service-card:hover .service-arrow {
+      background: var(--gold);
+      color: #1a1209;
+      transform: translateX(3px);
+    }
+
+    /* ---------- responsive ---------- */
+    /* laptop & small desktop: text on top, 4 cards below */
+    @media (max-width: 1199.98px) {
+      .services {
+        padding: 75px 0;
+      }
+
+      .service-card {
+        min-height: 300px;
+      }
+    }
+
+    /* tablet portrait / large phone: 2 cards per row */
+    @media (max-width: 767.98px) {
+      .services {
+        padding: 60px 0;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .service-card {
+        min-height: 260px;
+        padding: 16px;
+      }
+
+      .btn-hero {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    /* small phones: 1 card per row */
+    @media (max-width: 479.98px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: 230px;
+      }
+
+      .service-card:hover {
+        transform: none;
+      }
+    }
+  </style>
+
+  <!-- =========================================================
+       6) SERVICES SECTION TAG
+  ========================================================= -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="row align-items-center gy-5 gx-xl-5">
+
+        <!-- left content -->
+        <div class="col-12 col-xl-4">
+          <div class="services-text-box">
+            <p class="services-eyebrow">OUR SERVICES</p>
+            <h2 class="services-title">Complete Interior Solutions for Every Space</h2>
+            <p class="services-text">
+              From concept to completion, we design, plan and execute interiors that reflect your personality and
+              purpose. Whether it's a home, office or commercial space, we bring your ideas to life with style and
+              <strong>precision.</strong>
+            </p>
+            <a href="#" class="btn-hero">View All Services <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- cards -->
+        <div class="col-12 col-xl-8">
+          <div class="services-grid">
+
+            <a href="#" class="service-card">
+              <img class="service-card-bg"
+                src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?auto=format&fit=crop&q=70&w=600&h=800"
+                alt="Residential interior with beige modular sofa" loading="lazy">
+              <div class="service-body">
+                <i class="fa-solid fa-couch service-icon"></i>
+                <h3>Residential Interiors</h3>
+                <p>Elegant and comfortable living spaces.</p>
+              </div>
+              <span class="service-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="#" class="service-card">
+              <img class="service-card-bg"
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=70&w=600&h=800"
+                alt="Commercial interior with glass panel corridor" loading="lazy">
+              <div class="service-body">
+                <i class="fa-solid fa-building service-icon"></i>
+                <h3>Commercial Interiors</h3>
+                <p>Modern spaces for modern business.</p>
+              </div>
+              <span class="service-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="#" class="service-card">
+              <img class="service-card-bg"
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=70&w=600&h=800"
+                alt="Office interior with meeting table and chairs" loading="lazy">
+              <div class="service-body">
+                <i class="fa-solid fa-briefcase service-icon"></i>
+                <h3>Office Interiors</h3>
+                <p>Productive, stylish and functional workspaces.</p>
+              </div>
+              <span class="service-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="#" class="service-card">
+              <img class="service-card-bg"
+                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=70&w=600&h=800"
+                alt="Finished living room interior" loading="lazy">
+              <div class="service-body">
+                <i class="fa-solid fa-key service-icon"></i>
+                <h3>Turnkey Projects</h3>
+                <p>Design, execution &amp; complete handover.</p>
+              </div>
+              <span class="service-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- =========================================================
+     7) SHOWCASE STYLE  (left list | square image | right list)
+========================================================= -->
+  <style>
+    .showcase {
+      padding: 90px 0;
+      background: var(--ink);
+    }
+
+    .showcase-head {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .showcase-eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    .showcase-title {
+      font-size: clamp(28px, 3.2vw, 40px);
+      font-weight: 400;
+      margin: 0;
+    }
+
+    /* 3-column grid: list | image | list */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr minmax(300px, 440px) 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .showcase-group-label {
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: rgba(244, 239, 232, .5);
+      margin-bottom: 14px;
+    }
+
+    .showcase-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* list buttons */
+    .showcase-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      padding: 16px 0;
+      background: none;
+      border: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+      color: rgba(244, 239, 232, .65);
+      font-family: inherit;
+      font-size: 18px;
+      text-align: left;
+      cursor: pointer;
+      transition: color .25s, padding .25s, border-color .25s;
+    }
+
+    .showcase-item::before {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width .25s;
+    }
+
+    .showcase-item:hover {
+      color: var(--text);
+    }
+
+    .showcase-item.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    .showcase-item.active::before,
+    .showcase-item:hover::before {
+      width: 22px;
+    }
+
+    .showcase-item:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    /* left list is mirrored: text aligns toward the image */
+    .showcase-left {
+      text-align: right;
+    }
+
+    .showcase-left .showcase-item {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    /* center square image */
+    .showcase-frame {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(233, 168, 79, .45);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, .6), 0 0 40px rgba(233, 168, 79, .12);
+      background: #17120d;
+    }
+
+    /* two stacked images that crossfade */
+    .showcase-frame img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0;
+      transform: scale(1.06);
+      transition: opacity .7s ease, transform 1.1s ease;
+    }
+
+    .showcase-frame img.is-on {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .showcase-caption {
+      transition: opacity .3s ease;
+    }
+
+    .showcase-caption.is-fading {
+      opacity: 0;
+    }
+
+    .showcase-caption {
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 50px 22px 20px;
+      font-size: 20px;
+      background: linear-gradient(to top, rgba(0, 0, 0, .85), transparent);
+    }
+
+    /* tablet: image on top, lists side by side */
+    @media (max-width: 991.98px) {
+      .showcase {
+        padding: 70px 0;
+      }
+
+      .showcase-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .showcase-center {
+        grid-column: 1 / -1;
+        order: -1;
+        max-width: 440px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .showcase-left {
+        text-align: left;
+      }
+
+      .showcase-left .showcase-item {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+
+    /* mobile: lists stack under the image */
+    @media (max-width: 575.98px) {
+      .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .showcase-item {
+        font-size: 16px;
+        padding: 14px 0;
+      }
+    }
+  </style>
+
+  <!-- =========================================================
+     8) SHOWCASE SECTION TAG
+========================================================= -->
+  <section class="showcase" id="showcase">
+    <div class="container">
+
+      <div class="showcase-head">
+        <p class="showcase-eyebrow">OUR WORK</p>
+        <h2 class="showcase-title">Spaces We Design</h2>
+      </div>
+
+      <div class="showcase-grid">
+
+        <!-- LEFT LIST (5) -->
+        <div class="showcase-left">
+          <p class="showcase-group-label">HOMES</p>
+          <ul class="showcase-list">
+            <li><button type="button" class="showcase-item active" data-title="Living Room"
+                data-img="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?auto=format&fit=crop&q=70&w=900&h=900">Living
+                Room</button></li>
+            <li><button type="button" class="showcase-item" data-title="Fireplace Lounge"
+                data-img="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=70&w=900&h=900">Fireplace
+                Lounge</button></li>
+            <li><button type="button" class="showcase-item" data-title="Dining Area"
+                data-img="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&q=70&w=900&h=900">Dining
+                Area</button></li>
+            <li><button type="button" class="showcase-item" data-title="City Apartment"
+                data-img="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&q=70&w=900&h=900">City
+                Apartment</button></li>
+            <li><button type="button" class="showcase-item" data-title="Family Hall"
+                data-img="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=70&w=900&h=900">Family
+                Hall</button></li>
+          </ul>
+        </div>
+
+        <!-- CENTER IMAGE -->
+        <div class="showcase-center">
+          <div class="showcase-frame">
+            <img class="showcase-slide is-on" id="showcaseImgA"
+              src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?auto=format&fit=crop&q=70&w=900&h=900"
+              alt="Living Room">
+            <img class="showcase-slide" id="showcaseImgB" alt="">
+            <div class="showcase-caption" id="showcaseCaption">Living Room</div>
+          </div>
+        </div>
+
+        <!-- RIGHT LIST (5) -->
+        <div class="showcase-right">
+          <p class="showcase-group-label">WORKSPACES</p>
+          <ul class="showcase-list">
+            <li><button type="button" class="showcase-item" data-title="Glass Offices"
+                data-img="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=70&w=900&h=900">Glass
+                Offices</button></li>
+            <li><button type="button" class="showcase-item" data-title="Meeting Rooms"
+                data-img="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=70&w=900&h=900">Meeting
+                Rooms</button></li>
+            <li><button type="button" class="showcase-item" data-title="Cafe &amp; Lounge"
+                data-img="https://images.unsplash.com/photo-1579487785973-74d2ca7abdd5?auto=format&fit=crop&q=70&w=900&h=900">Cafe
+                &amp; Lounge</button></li>
+            <li><button type="button" class="showcase-item" data-title="Open Workspace"
+                data-img="https://images.unsplash.com/photo-1549637642-90187f64f420?auto=format&fit=crop&q=70&w=900&h=900">Open
+                Workspace</button></li>
+            <li><button type="button" class="showcase-item" data-title="Work Studios"
+                data-img="https://images.unsplash.com/photo-1698680746129-89aea8bb512d?auto=format&fit=crop&q=70&w=900&h=900">Work
+                Studios</button></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 9) SHOWCASE SCRIPT (jQuery) - add after the jQuery  -->
+
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var items = document.querySelectorAll('.showcase-item');
+      var slides = [document.getElementById('showcaseImgA'), document.getElementById('showcaseImgB')];
+      var caption = document.getElementById('showcaseCaption');
+      var current = 0;     // index of the visible slide
+      var token = 0;       // ignores outdated loads when clicking fast
+
+      // preload all images
+      items.forEach(function (b) { new Image().src = b.dataset.img; });
+
+      items.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (btn.classList.contains('active')) return;
+
+          items.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+          btn.classList.add('active');
+          btn.setAttribute('aria-pressed', 'true');
+
+          var src = btn.dataset.img, title = btn.dataset.title, myToken = ++token;
+          var next = 1 - current;
+          var loader = new Image();
+
+          loader.onload = function () {
+            if (myToken !== token) return;
+            slides[next].src = src;
+            slides[next].alt = title;
+            // next frame -> so the browser animates the change
+            requestAnimationFrame(function () {
+              slides[next].classList.add('is-on');
+              slides[current].classList.remove('is-on');
+              current = next;
+            });
+            caption.classList.add('is-fading');
+            setTimeout(function () {
+              caption.textContent = title;
+              caption.classList.remove('is-fading');
+            }, 300);
+          };
+          loader.src = src;
+        });
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- =========================================================
+     10) FOOTER STYLE
+     (needs Font Awesome link in <head> - already added with services)
+========================================================= -->
+  <style>
+    .site-footer {
+      position: relative;
+      background: #090705;
+      border-top: 1px solid rgba(233, 168, 79, .15);
+      overflow: hidden;
+    }
+
+    /* soft gold glow on the left so it never feels empty */
+    .site-footer::before {
+      content: "";
+      position: absolute;
+      left: -180px;
+      top: 40px;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(233, 168, 79, .13), transparent 68%);
+      pointer-events: none;
+    }
+
+    .site-footer>.container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ---------- CTA band ---------- */
+    .footer-cta {
+      padding: 36px 40px;
+      border: 1px solid rgba(233, 168, 79, .3);
+      border-radius: 18px;
+      background: linear-gradient(120deg, rgba(233, 168, 79, .16), rgba(233, 168, 79, .03));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+      background-color: #120d08;
+    }
+
+    .footer-cta h3 {
+      font-size: clamp(22px, 2.6vw, 30px);
+      font-weight: 400;
+      margin: 0 0 6px;
+    }
+
+    .footer-cta h3 span {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .footer-cta p {
+      margin: 0;
+      font-size: 14px;
+      color: rgba(244, 239, 232, .75);
+    }
+
+
+    /* ---------- brand column ---------- */
+    .footer-logo {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+      height: 64px;
+      width: auto;
+      max-width: 100%;
+      display: block;
+    }
+
+    .footer-about {
+      font-size: 14px;
+      line-height: 1.75;
+      color: rgba(244, 239, 232, .8);
+      max-width: 360px;
+      margin-bottom: 24px;
+    }
+
+    .footer-sub-title {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    /* newsletter */
+    .footer-news {
+      display: flex;
+      max-width: 360px;
+      margin-bottom: 26px;
+      border: 1px solid rgba(233, 168, 79, .4);
+      border-radius: 40px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, .04);
+      transition: border-color .25s;
+    }
+
+    .footer-news:focus-within {
+      border-color: var(--gold);
+    }
+
+    .footer-news input {
+      flex: 1;
+      min-width: 0;
+      background: transparent;
+      border: 0;
+      outline: 0;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14px;
+      padding: 12px 18px;
+    }
+
+    .footer-news input::placeholder {
+      color: rgba(244, 239, 232, .5);
+    }
+
+    .footer-news button {
+      border: 0;
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+      color: #1a1209;
+      width: 50px;
+      cursor: pointer;
+      transition: filter .25s;
+    }
+
+    .footer-news button:hover {
+      filter: brightness(1.1);
+    }
+
+    /* social */
+    .footer-social {
+      display: flex;
+      gap: 14px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--text);
+      font-size: 15px;
+      transition: .25s;
+    }
+
+    .footer-social a:hover {
+      background: var(--gold);
+      color: #1a1209;
+      transform: translateY(-3px);
+    }
+
+    /* ---------- link columns ---------- */
+    .footer-title {
+      position: relative;
+      color: var(--gold);
+      font-size: 17px;
+      font-weight: 500;
+      margin-bottom: 22px;
+      padding-bottom: 12px;
+    }
+
+    .footer-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 32px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(244, 239, 232, .8);
+      font-size: 14px;
+      transition: color .2s, padding .2s;
+    }
+
+    .footer-links a::before {
+      content: "\f105";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--gold);
+      margin-right: 8px;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+      padding-left: 5px;
+    }
+
+    /* ---------- contact ---------- */
+    .footer-contact {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px;
+    }
+
+    .footer-contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: rgba(244, 239, 232, .85);
+    }
+
+    .footer-contact .ic {
+      flex: 0 0 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(233, 168, 79, .12);
+      color: var(--gold);
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+    }
+
+    .footer-contact small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: rgba(244, 239, 232, .5);
+      margin-bottom: 1px;
+    }
+
+    .footer-contact a {
+      color: inherit;
+      word-break: break-word;
+    }
+
+    .footer-contact a:hover {
+      color: var(--gold);
+    }
+
+    /* shared gold button */
+    .footer-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+      color: #1a1209;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 13px 28px;
+      border-radius: 30px;
+      transition: .25s;
+      white-space: nowrap;
+    }
+
+    .footer-btn:hover {
+      color: #1a1209;
+      filter: brightness(1.08);
+      transform: translateY(-2px);
+    }
+
+    .footer-btn i {
+      transition: transform .25s;
+    }
+
+    .footer-btn:hover i {
+      transform: translateX(4px);
+    }
+
+    /* ---------- bottom bar ---------- */
+    .footer-bottom {
+      margin-top: 50px;
+      padding: 22px 0;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+      color: rgba(244, 239, 232, .7);
+    }
+
+    .footer-legal {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-legal a {
+      color: rgba(244, 239, 232, .8);
+      padding: 0 14px;
+    }
+
+    .footer-legal a:first-child {
+      border-right: 1px solid rgba(255, 255, 255, .25);
+    }
+
+    .footer-legal a:last-child {
+      padding-right: 0;
+    }
+
+    .footer-legal a:hover {
+      color: var(--gold);
+    }
+
+    /* ---------- responsive ---------- */
+    .footer-wrap {
+      padding-top: 70px;
+    }
+
+    @media (max-width: 767.98px) {
+      .footer-wrap {
+        padding-top: 50px;
+      }
+
+      .footer-cta {
+        padding: 28px 22px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .footer-cta .footer-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 36px;
+      }
+
+      .footer-about,
+      .footer-news {
+        max-width: 100%;
+      }
+
+      .footer-contact+.footer-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <!-- =========================================================
+     11) FOOTER TAG
+========================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+
+      <!-- CTA band -->
+      <div class="footer-cta">
+        <div>
+          <h3>Ready to create your <span>dream space?</span></h3>
+          <p>Tell us about your project and get a free design consultation.</p>
+        </div>
+        <a href="#" class="footer-btn">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="row gy-5 footer-main">
+
+        <!-- brand -->
+        <div class="col-12 col-lg-4">
+          <!-- replace ./assets/logo.png with your logo image -->
+          <a href="#" class="footer-logo"><img src="./assets/logo.png" alt="Suntek Designs"></a>
+          <p class="footer-about">
+            Premium interior design and fit-out solutions for homes, offices and commercial spaces.
+            We design spaces that inspire.
+          </p>
+
+          <!-- <p class="footer-sub-title">Get design ideas in your inbox</p>
+          <form class="footer-news" onsubmit="return false;">
+            <input type="email" placeholder="Your email address" aria-label="Email address">
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+          </form> -->
+
+          <ul class="footer-social">
+            <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- quick links -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- services -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <h4 class="footer-title">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">Residential Interiors</a></li>
+            <li><a href="#">Commercial Interiors</a></li>
+            <li><a href="#">Office Interiors</a></li>
+            <li><a href="#">Turnkey Projects</a></li>
+            <li><a href="#">Design Consultation</a></li>
+          </ul>
+        </div>
+
+        <!-- contact -->
+        <div class="col-12 col-md-4 col-lg-3">
+          <h4 class="footer-title">Get in Touch</h4>
+          <ul class="footer-contact">
+            <li><span class="ic"><i class="fa-solid fa-location-dot"></i></span>
+              <span><small>VISIT US</small>Mohali, Punjab, India</span>
+            </li>
+            <li><span class="ic"><i class="fa-solid fa-phone"></i></span>
+              <span><small>CALL US</small><a href="tel:+919876543210">+91 98765 43210</a></span>
+            </li>
+            <li><span class="ic"><i class="fa-solid fa-envelope"></i></span>
+              <span><small>EMAIL US</small><a href="mailto:info@suntekdesigns.com">info@suntekdesigns.com</a></span>
+            </li>
+            <li><span class="ic"><i class="fa-solid fa-clock"></i></span>
+              <span><small>WORKING HOURS</small>Mon - Sat, 10:00 AM - 7:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- bottom bar -->
+      <div class="footer-bottom">
+        <span>&copy; <span id="footerYear">2026</span> Suntek Designs. All Rights Reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Scripts (Bootstrap bundle handles the dropdown + mobile menu; jQuery only for closing menu on link tap) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(function () {
+      // close mobile menu after tapping a normal link (not the Services toggle)
+      $('#mainNav .nav-link:not(.dropdown-toggle), #mainNav .dropdown-item').on('click', function () {
+        if ($(window).width() < 992) $('#mainNav').collapse('hide');
+      });
+    });
+  </script>
+</body>
+
+</html>
