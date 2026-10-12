@@ -18,6 +18,10 @@
      1) HEADER STYLE
 ========================================================= -->
   <style>
+    html {
+      scroll-padding-top: 80px;
+    }
+
     a {
       text-decoration: none;
     }
@@ -25,7 +29,8 @@
     :root {
       --gold: #e9a84f;
       --gold-soft: #f3c982;
-      --ink: #0c0a08;
+      /* --ink: #0c0a08; */
+      --ink: #000b0f;
       --text: #f4efe8;
     }
 
@@ -37,13 +42,24 @@
     }
 
     .site-header {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 50;
+      z-index: 1030;
       padding: 18px 0;
       background: linear-gradient(to bottom, rgba(0, 0, 0, .75), transparent);
+      transition: padding .3s ease, background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
+    }
+
+    /* added by the script after scrolling */
+    .site-header.is-scrolled {
+      padding: 10px 0;
+      background: rgba(9, 7, 5, .92);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, .45);
+      border-bottom: 1px solid rgba(233, 168, 79, .18);
     }
 
     .site-header .navbar {
@@ -164,12 +180,19 @@
         padding: 12px 0;
       }
 
+      .site-header.is-scrolled {
+        padding: 10px 0;
+        background: rgba(9, 7, 5, .95);
+      }
+
       .site-header .navbar-collapse {
         background: rgba(14, 11, 8, .98);
         margin-top: 14px;
         padding: 10px 18px 20px;
         border: 1px solid rgba(233, 168, 79, .25);
         border-radius: 12px;
+        max-height: calc(100vh - 90px);
+        overflow-y: auto;
       }
 
       .site-header .nav-link {
@@ -292,9 +315,7 @@
 
 
 
-  <!-- =========================================================
-     3) HERO STYLE
-========================================================= -->
+  <!-- hero section style -->
   <style>
     .hero {
       position: relative;
@@ -440,9 +461,9 @@
     }
   </style>
 
-  <!-- =========================================================
-     4) HERO SECTION TAG
-========================================================= -->
+
+
+  <!-- hero section html code -->
   <section class="hero" id="home">
 
     <!-- Replace video/hero.mp4 and poster with your own files -->
@@ -479,9 +500,7 @@
 
 
 
-  <!-- =========================================================
-       10) WHY CHOOSE US - STYLE  (uses your existing :root colors)
-  ========================================================= -->
+  <!-- why choose us style -->
   <style>
     .why {
       background: var(--ink);
@@ -550,7 +569,7 @@
       font-size: 15px;
       line-height: 1.7;
       color: rgba(244, 239, 232, .75);
-      max-width: 440px;
+      max-width: 470px;
       margin: 0 0 26px;
     }
 
@@ -677,9 +696,10 @@
     }
   </style>
 
-  <!-- =========================================================
-       11) WHY CHOOSE US - SECTION TAG
-  ========================================================= -->
+
+
+
+  <!-- why choose us html -->
   <section class="why" id="why">
     <div class="why-grid">
 
@@ -692,10 +712,14 @@
       <!-- MIDDLE CONTENT -->
       <div class="why-content">
         <p class="why-eyebrow">Why Choose Suntek Designs?</p>
-        <h2 class="why-title">Crafted with Precision.<br>Built for Your Vision.</h2>
+        <h2 class="why-title">Crafting Spaces, Shaping.<br>
+          Dreams Since 2007</h2>
         <p class="why-text">
-          We combine creativity, quality craftsmanship and advanced technology to deliver spaces that are
-          not only beautiful but also functional and durable.
+          With over 16 years of excellence, Suntek Designs—part of the Suntek Groups—is your trusted partner for
+          high-end interior
+          design solutions across residential, commercial, and retail spaces. Rooted in Singapore and registered under
+          BCA & HDB,
+          we bring together innovation, precision, and passion to elevate every project.
         </p>
         <a href="#about" class="why-btn">Learn More About Us <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -705,21 +729,28 @@
         <li class="why-feature">
           <span class="why-icon"><i class="fa-solid fa-lightbulb"></i></span>
           <div>
-            <h3>Innovative Design Approach</h3>
+            <h3>Commercial</h3>
             <p>Fresh ideas, timeless style.</p>
           </div>
         </li>
         <li class="why-feature">
           <span class="why-icon"><i class="fa-solid fa-leaf"></i></span>
           <div>
-            <h3>Sustainable Solutions</h3>
+            <h3>Industrial</h3>
             <p>Better for you, better for tomorrow.</p>
           </div>
         </li>
         <li class="why-feature">
           <span class="why-icon"><i class="fa-solid fa-handshake"></i></span>
           <div>
-            <h3>Client-Centric Process</h3>
+            <h3>Residential</h3>
+            <p>Your vision, our priority.</p>
+          </div>
+        </li>
+        <li class="why-feature">
+          <span class="why-icon"><i class="fa-solid fa-handshake"></i></span>
+          <div>
+            <h3>Corporate</h3>
             <p>Your vision, our priority.</p>
           </div>
         </li>
@@ -1059,9 +1090,7 @@
 
 
 
-  <!-- =========================================================
-     7) SHOWCASE STYLE  (left list | square image | right list)
-========================================================= -->
+  <!-- show case style -->
   <style>
     .showcase {
       padding: 40px 0;
@@ -1291,9 +1320,8 @@
     }
   </style>
 
-  <!-- =========================================================
-     8) SHOWCASE SECTION TAG
-========================================================= -->
+
+  <!-- show case html -->
   <section class="showcase" id="showcase">
     <div class="container">
 
@@ -1306,7 +1334,7 @@
 
         <!-- LEFT LIST (3) -->
         <div class="showcase-left">
-          <p class="showcase-group-label">HOMES</p>
+          <p class="showcase-group-label">Experiences</p>
           <ul class="showcase-list">
             <li>
               <button type="button" class="showcase-item active" data-title="Living Room"
@@ -1314,8 +1342,10 @@
                 data-img="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?auto=format&fit=crop&q=70&w=900&h=900">
                 <span class="showcase-icon"><i class="fa-solid fa-couch"></i></span>
                 <span class="showcase-text">
-                  <strong>Living Room</strong>
-                  <small>Warm, welcoming spaces made for everyday comfort.</small>
+                  <strong>16+ Years of Experience</strong>
+                  <small>Our long-standing presence in the industry reflects our ability to evolve with design trends
+                    while maintaining
+                    consistent quality and service</small>
                 </span>
               </button>
             </li>
@@ -1325,8 +1355,10 @@
                 data-img="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=70&w=900&h=900">
                 <span class="showcase-icon"><i class="fa-solid fa-fire"></i></span>
                 <span class="showcase-text">
-                  <strong>Fireplace Lounge</strong>
-                  <small>Cozy corners built around a glowing focal point.</small>
+                  <strong>HDB & BCA Registered</strong>
+                  <small>Being officially registered ensures that all our projects meet Singapore’s regulatory standards
+                    for safety, quality, and
+                    compliance.</small>
                 </span>
               </button>
             </li>
@@ -1336,8 +1368,9 @@
                 data-img="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&q=70&w=900&h=900">
                 <span class="showcase-icon"><i class="fa-solid fa-utensils"></i></span>
                 <span class="showcase-text">
-                  <strong>Dining Area</strong>
-                  <small>Elegant layouts for meals and memorable gatherings.</small>
+                  <strong>In-House Carpentry Workshop</strong>
+                  <small>We manage everything in-house, giving us full control over quality, customization, and
+                    timelines—no middlemen involved.</small>
                 </span>
               </button>
             </li>
@@ -1368,8 +1401,9 @@
                 data-img="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=70&w=900&h=900">
                 <span class="showcase-icon"><i class="fa-solid fa-building"></i></span>
                 <span class="showcase-text">
-                  <strong>Glass Offices</strong>
-                  <small>Bright, open offices that feel modern and transparent.</small>
+                  <strong>Transparent Pricing</strong>
+                  <small>No hidden fees or surprise charges. We believe in honest, upfront quotations with clear
+                    deliverables.</small>
                 </span>
               </button>
             </li>
@@ -1379,8 +1413,9 @@
                 data-img="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=70&w=900&h=900">
                 <span class="showcase-icon"><i class="fa-solid fa-people-group"></i></span>
                 <span class="showcase-text">
-                  <strong>Meeting Rooms</strong>
-                  <small>Focused rooms designed for ideas and clear decisions.</small>
+                  <strong>Professional Team</strong>
+                  <small>Our well-planned workflow and dedicated team ensure every project is delivered on
+                    schedule—without cutting corners.</small>
                 </span>
               </button>
             </li>
@@ -1390,8 +1425,9 @@
                 data-img="https://images.unsplash.com/photo-1579487785973-74d2ca7abdd5?auto=format&fit=crop&q=70&w=900&h=900">
                 <span class="showcase-icon"><i class="fa-solid fa-mug-hot"></i></span>
                 <span class="showcase-text">
-                  <strong>Cafe &amp; Lounge</strong>
-                  <small>Relaxed break-out zones to recharge and connect.</small>
+                  <strong>100% Customer Satisfaction</strong>
+                  <small>Your satisfaction is our success. We go the extra mile to ensure you're thrilled with the final
+                    outcome.</small>
                 </span>
               </button>
             </li>
@@ -1403,7 +1439,7 @@
   </section>
 
 
-  <!-- 9) SHOWCASE SCRIPT -->
+  <!-- SHOWCASE SCRIPT -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var items = document.querySelectorAll('.showcase-item');
@@ -3800,6 +3836,19 @@
   <!-- Scripts (Bootstrap bundle handles the dropdown + mobile menu; jQuery only for closing menu on link tap) -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      var header = document.querySelector('.site-header');
+      if (!header) return;
+
+      function onScroll() {
+        header.classList.toggle('is-scrolled', window.scrollY > 40);
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
   <script>
     $(function () {
       // close mobile menu after tapping a normal link (not the Services toggle)

@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Team | Suntek Designs</title>
+
+    <!-- Bootstrap 5 + Font -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- =========================================================
+           Add ONCE in <head>  (Font Awesome icons)
+      ========================================================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- =========================================================
+     1) HEADER STYLE  (same as index.html)
+========================================================= -->
+    <style>
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        :root {
+            --gold: #e9a84f;
+            --gold-soft: #f3c982;
+            /* --ink: #0c0a08; */
+            --ink: #000b0f;
+            --text: #f4efe8;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--ink);
+            color: var(--text);
+            margin: 0;
+        }
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1030;
+            padding: 18px 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, .75), transparent);
+            transition: padding .3s ease, background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
+        }
+
+        /* added by the script after scrolling */
+        .site-header.is-scrolled {
+            padding: 10px 0;
+            background: rgba(9, 7, 5, .92);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .45);
+            border-bottom: 1px solid rgba(233, 168, 79, .18);
+        }
+
+        .site-header .navbar {
+            padding: 0;
+        }
+
+        /* Logo */
+        .brand {
+            text-decoration: none;
+            line-height: 1;
+            display: inline-block;
+        }
+
+        .brand-main {
+            display: block;
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--text);
+        }
+
+        .brand-main b {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .brand-sub {
+            display: block;
+            font-size: 9px;
+            letter-spacing: 6px;
+            color: var(--gold);
+            text-align: center;
+            margin-top: 3px;
+        }
+
+        /* Links */
+        .site-header .nav-link {
+            color: var(--text);
+            font-size: 15px;
+            padding: 8px 4px;
+            margin: 0 14px;
+            border-bottom: 2px solid transparent;
+            transition: color .2s;
+        }
+
+        .site-header .nav-link:hover,
+        .site-header .nav-link.active {
+            color: var(--gold);
+        }
+
+        .site-header .nav-link.active {
+            border-bottom-color: var(--gold);
+        }
+
+        /* Services dropdown */
+        .site-header .dropdown-menu {
+            background: rgba(18, 14, 10, .97);
+            border: 1px solid rgba(233, 168, 79, .3);
+            border-radius: 10px;
+            padding: 8px;
+            min-width: 220px;
+            margin-top: -7px;
+        }
+
+        .site-header .dropdown-item {
+            color: var(--text);
+            font-size: 14px;
+            padding: 9px 14px;
+            border-radius: 6px;
+        }
+
+        .site-header .dropdown-item:hover {
+            background: rgba(233, 168, 79, .15);
+            color: var(--gold);
+        }
+
+        /* Quote button */
+        .btn-quote {
+            color: var(--text);
+            border: 1px solid var(--gold);
+            border-radius: 30px;
+            padding: 9px 24px;
+            font-size: 15px;
+            background: transparent;
+            transition: .25s;
+        }
+
+        .btn-quote:hover {
+            background: var(--gold);
+            color: #1a1209;
+        }
+
+        /* Toggler */
+        .navbar-toggler {
+            border: 1px solid var(--gold);
+            padding: 6px 10px;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        /* Desktop: open dropdown on hover */
+        @media (min-width:992px) {
+            .site-header .dropdown:hover>.dropdown-menu {
+                display: block;
+            }
+        }
+
+        /* Mobile / tablet: collapsed menu panel */
+        @media (max-width:991.98px) {
+            .site-header {
+                background: rgba(0, 0, 0, .85);
+                padding: 12px 0;
+            }
+
+            .site-header.is-scrolled {
+                padding: 10px 0;
+                background: rgba(9, 7, 5, .95);
+            }
+
+            .site-header .navbar-collapse {
+                background: rgba(14, 11, 8, .98);
+                margin-top: 14px;
+                padding: 10px 18px 20px;
+                border: 1px solid rgba(233, 168, 79, .25);
+                border-radius: 12px;
+                max-height: calc(100vh - 90px);
+                overflow-y: auto;
+            }
+
+            .site-header .nav-link {
+                margin: 0;
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, .08);
+            }
+
+            .site-header .nav-link.active {
+                border-bottom-color: rgba(255, 255, 255, .08);
+            }
+
+            .site-header .dropdown-menu {
+                background: transparent;
+                border: 0;
+                padding: 0 0 0 12px;
+                margin: 0;
+            }
+
+            .btn-quote {
+                display: block;
+                text-align: center;
+                margin-top: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+     2) HEADER TAG  (same as index.html)
+========================================================= -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+
+                <a class="brand" href="index.html">
+                    <span class="brand-main">SUN<b>TEK</b></span>
+                    <span class="brand-sub">DESIGNS</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="team.html">Team</a></li>
+
+                        <!-- Services dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDrop" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDrop">
+                                <li><a class="dropdown-item" href="#">Residential Interiors</a></li>
+                                <li><a class="dropdown-item" href="#">Office Interiors</a></li>
+                                <li><a class="dropdown-item" href="#">Commercial Spaces</a></li>
+                                <li><a class="dropdown-item" href="#">Modular Kitchens</a></li>
+                                <li><a class="dropdown-item" href="#">Fit-out Solutions</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    </ul>
+
+                    <a href="#" class="btn-quote">Get a Quote &rarr;</a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- team style -->
+    <style>
+        /* ---------- page banner ---------- */
+        .team-banner {
+            position: relative;
+            padding: 170px 0 80px;
+            background: var(--ink);
+            overflow: hidden;
+            border-bottom: 1px solid rgba(233, 168, 79, .15);
+        }
+
+        /* replace the image URL with your own banner photo */
+        .team-banner-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .28;
+        }
+
+        .team-banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 11, 15, .55), var(--ink) 98%);
+        }
+
+        .team-banner .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .team-crumbs {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            margin: 0 0 18px;
+            padding: 0;
+            font-size: 14px;
+            color: rgba(244, 239, 232, .6);
+        }
+
+        .team-crumbs a {
+            color: rgba(244, 239, 232, .8);
+            transition: color .2s;
+        }
+
+        .team-crumbs a:hover {
+            color: var(--gold);
+        }
+
+        .team-crumbs li+li::before {
+            content: "\f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--gold);
+            margin-right: 10px;
+            font-size: 12px;
+        }
+
+        .team-banner h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            font-weight: 400;
+            line-height: 1.08;
+            margin: 0 0 16px;
+        }
+
+        .team-banner h1 span {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .team-banner p {
+            max-width: 520px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(244, 239, 232, .8);
+            margin: 0;
+        }
+
+        /* ---------- team section ---------- */
+        .team {
+            padding: 90px 0 100px;
+            background: var(--ink);
+        }
+
+        .team-head {
+            max-width: 620px;
+            margin: 0 auto 56px;
+            text-align: center;
+        }
+
+        .team-eyebrow {
+            color: var(--gold);
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0 0 12px;
+        }
+
+        .team-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 400;
+            line-height: 1.15;
+            margin: 0 0 14px;
+        }
+
+        .team-lead {
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(244, 239, 232, .7);
+            margin: 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        /* ---------- card ---------- */
+        .team-card {
+            position: relative;
+            aspect-ratio: 3 / 4.3;
+            border-radius: 18px;
+            overflow: hidden;
+            background: #120d08;
+            border: 1px solid rgba(255, 255, 255, .12);
+            transition: transform .45s cubic-bezier(.22, .8, .3, 1), border-color .35s, box-shadow .35s;
+            outline: none;
+        }
+
+        .team-card:hover,
+        .team-card:focus-visible {
+            transform: translateY(-10px);
+            border-color: rgba(233, 168, 79, .7);
+            box-shadow: 0 26px 50px rgba(233, 168, 79, .16), 0 0 0 1px rgba(233, 168, 79, .25);
+        }
+
+        /* photo: starts muted, turns to full colour on hover */
+        .team-photo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(.9) brightness(.8) contrast(1.05);
+            transform: scale(1.02);
+            transition: filter .6s ease, transform .9s cubic-bezier(.22, .8, .3, 1);
+        }
+
+        .team-card:hover .team-photo,
+        .team-card:focus-visible .team-photo {
+            filter: grayscale(0) brightness(.95) contrast(1);
+            transform: scale(1.1);
+        }
+
+        /* gold frame corners that draw in on hover */
+        .team-card::before,
+        .team-card::after {
+            content: "";
+            position: absolute;
+            z-index: 3;
+            width: 0;
+            height: 0;
+            border: 0 solid var(--gold);
+            transition: width .45s ease, height .45s ease;
+            pointer-events: none;
+        }
+
+        .team-card::before {
+            top: 14px;
+            left: 14px;
+            border-top-width: 2px;
+            border-left-width: 2px;
+            border-top-left-radius: 10px;
+        }
+
+        .team-card::after {
+            right: 14px;
+            bottom: 14px;
+            border-bottom-width: 2px;
+            border-right-width: 2px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .team-card:hover::before,
+        .team-card:hover::after,
+        .team-card:focus-visible::before,
+        .team-card:focus-visible::after {
+            width: 54px;
+            height: 54px;
+        }
+
+        /* experience badge */
+        .team-exp {
+            position: absolute;
+            z-index: 4;
+            top: 18px;
+            left: 18px;
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #1a1209;
+            background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity .35s .1s, transform .35s .1s;
+        }
+
+        .team-card:hover .team-exp,
+        .team-card:focus-visible .team-exp {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* social icons slide in from the right, one after another */
+        .team-social {
+            position: absolute;
+            z-index: 4;
+            top: 18px;
+            right: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .team-social a {
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            background: rgba(0, 11, 15, .6);
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+            color: var(--text);
+            font-size: 14px;
+            opacity: 0;
+            transform: translateX(26px);
+            transition: opacity .35s, transform .35s, background .25s, color .25s;
+        }
+
+        .team-card:hover .team-social a,
+        .team-card:focus-visible .team-social a {
+            opacity: 1;
+            transform: none;
+        }
+
+        .team-social li:nth-child(1) a {
+            transition-delay: .08s, .08s, 0s, 0s;
+        }
+
+        .team-social li:nth-child(2) a {
+            transition-delay: .16s, .16s, 0s, 0s;
+        }
+
+        .team-social li:nth-child(3) a {
+            transition-delay: .24s, .24s, 0s, 0s;
+        }
+
+        .team-social a:hover {
+            background: var(--gold);
+            color: #1a1209;
+        }
+
+        /* info panel: name + role always visible, bio rises on hover */
+        .team-info {
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 70px 22px 22px;
+            background: linear-gradient(to top, rgba(8, 6, 4, .96) 62%, rgba(8, 6, 4, 0));
+            transform: translateY(calc(100% - 128px));
+            transition: transform .5s cubic-bezier(.22, .8, .3, 1);
+        }
+
+        .team-card:hover .team-info,
+        .team-card:focus-visible .team-info {
+            transform: none;
+        }
+
+        .team-name {
+            font-size: 21px;
+            font-weight: 500;
+            line-height: 1.2;
+            margin: 0 0 4px;
+        }
+
+        .team-role {
+            display: block;
+            font-size: 13px;
+            color: var(--gold);
+            margin-bottom: 0;
+        }
+
+        .team-bio {
+            font-size: 13px;
+            line-height: 1.6;
+            color: rgba(244, 239, 232, .78);
+            margin: 18px 0 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(233, 168, 79, .35);
+        }
+
+        .team-mail {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text);
+            transition: color .25s;
+        }
+
+        .team-mail i {
+            transition: transform .25s;
+        }
+
+        .team-mail:hover {
+            color: var(--gold);
+        }
+
+        .team-mail:hover i {
+            transform: translateX(5px);
+        }
+
+        /* ---------- responsive ---------- */
+        @media (max-width: 1199.98px) {
+            .team-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 22px;
+            }
+
+            .team-card {
+                aspect-ratio: 3 / 3.8;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .team-banner {
+                padding: 130px 0 60px;
+            }
+
+            .team {
+                padding: 60px 0 70px;
+            }
+
+            .team-head {
+                margin-bottom: 36px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-card {
+                aspect-ratio: 3 / 3.9;
+            }
+        }
+
+        /* touch screens have no hover, so show everything */
+        @media (hover: none) {
+            .team-photo {
+                filter: grayscale(.2) brightness(.9);
+            }
+
+            .team-info {
+                transform: none;
+            }
+
+            .team-exp,
+            .team-social a {
+                opacity: 1;
+                transform: none;
+            }
+
+            .team-card::before,
+            .team-card::after {
+                width: 40px;
+                height: 40px;
+            }
+
+            .team-card:hover {
+                transform: none;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .team-card,
+            .team-photo,
+            .team-info,
+            .team-social a,
+            .team-exp,
+            .team-card::before,
+            .team-card::after {
+                transition: none;
+            }
+        }
+    </style>
+
+    <!-- Team html -->
+    <section class="team-banner">
+        <!-- replace with your own banner image -->
+        <img class="team-banner-bg"
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=60&w=1600&h=700"
+            alt="">
+        <div class="container">
+            <ul class="team-crumbs">
+                <li><a href="index.html">Home</a></li>
+                <li>Team</li>
+            </ul>
+            <h1>The people behind <span>every space.</span></h1>
+            <p>Designers, architects and project managers working together from the first sketch to the final handover.
+            </p>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="container">
+
+            <div class="team-head">
+                <p class="team-eyebrow">Meet the team</p>
+                <h2 class="team-title">Creative minds, careful hands</h2>
+                <p class="team-lead">Over 16 years, the same core team has planned, built and delivered homes, offices
+                    and
+                    retail spaces across Singapore.</p>
+            </div>
+
+            <div class="team-grid">
+
+                <!-- member 1 (replace photo, name, role, bio, links) -->
+                <article class="team-card" tabindex="0">
+                    <img class="team-photo"
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=70&w=700&h=950"
+                        alt="Arjun Mehta" loading="lazy">
+                    <span class="team-exp">16 yrs experience</span>
+                    <ul class="team-social">
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+                    </ul>
+                    <div class="team-info">
+                        <h3 class="team-name">Arjun Mehta</h3>
+                        <span class="team-role">Founder &amp; Principal Designer</span>
+                        <p class="team-bio">Started Suntek Designs in 2007 and still leads every concept presentation.
+                        </p>
+                        <a href="mailto:suntekdesigns@gmail.com" class="team-mail">Say hello <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- member 2 -->
+                <article class="team-card" tabindex="0">
+                    <img class="team-photo"
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=70&w=700&h=950"
+                        alt="Priya Nair" loading="lazy">
+                    <span class="team-exp">12 yrs experience</span>
+                    <ul class="team-social">
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+                    </ul>
+                    <div class="team-info">
+                        <h3 class="team-name">Priya Nair</h3>
+                        <span class="team-role">Head of Residential Design</span>
+                        <p class="team-bio">Plans warm, practical homes and manages every material and finish selection.
+                        </p>
+                        <a href="mailto:suntekdesigns@gmail.com" class="team-mail">Say hello <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- member 3 -->
+                <article class="team-card" tabindex="0">
+                    <img class="team-photo"
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=70&w=700&h=950"
+                        alt="Daniel Tan" loading="lazy">
+                    <span class="team-exp">14 yrs experience</span>
+                    <ul class="team-social">
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+                    </ul>
+                    <div class="team-info">
+                        <h3 class="team-name">Daniel Tan</h3>
+                        <span class="team-role">Project Director</span>
+                        <p class="team-bio">Keeps schedules, budgets and site teams aligned so projects hand over on
+                            time.</p>
+                        <a href="mailto:suntekdesigns@gmail.com" class="team-mail">Say hello <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- member 4 -->
+                <article class="team-card" tabindex="0">
+                    <img class="team-photo"
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=70&w=700&h=950"
+                        alt="Meera Iyer" loading="lazy">
+                    <span class="team-exp">9 yrs experience</span>
+                    <ul class="team-social">
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+                    </ul>
+                    <div class="team-info">
+                        <h3 class="team-name">Meera Iyer</h3>
+                        <span class="team-role">Commercial Design Lead</span>
+                        <p class="team-bio">Designs offices and retail fit-outs that suit how each business actually
+                            works.</p>
+                        <a href="mailto:suntekdesigns@gmail.com" class="team-mail">Say hello <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer style -->
+    <style>
+        .site-footer {
+            position: relative;
+            background: #090705;
+            border-top: 1px solid rgba(233, 168, 79, .15);
+            overflow: hidden;
+        }
+
+        /* soft gold glow on the left so it never feels empty */
+        .site-footer::before {
+            content: "";
+            position: absolute;
+            left: -180px;
+            top: 40px;
+            width: 520px;
+            height: 520px;
+            background: radial-gradient(circle, rgba(233, 168, 79, .13), transparent 68%);
+            pointer-events: none;
+        }
+
+        .site-footer>.container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ---------- CTA band ---------- */
+        .footer-cta {
+            padding: 36px 40px;
+            border: 1px solid rgba(233, 168, 79, .3);
+            border-radius: 18px;
+            background: linear-gradient(120deg, rgba(233, 168, 79, .16), rgba(233, 168, 79, .03));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+            background-color: #120d08;
+        }
+
+        .footer-cta h3 {
+            font-size: clamp(22px, 2.6vw, 30px);
+            font-weight: 400;
+            margin: 0 0 6px;
+        }
+
+        .footer-cta h3 span {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .footer-cta p {
+            margin: 0;
+            font-size: 14px;
+            color: rgba(244, 239, 232, .75);
+        }
+
+
+        /* ---------- brand column ---------- */
+        .footer-logo {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 64px;
+            width: auto;
+            max-width: 100%;
+            display: block;
+        }
+
+        .footer-about {
+            font-size: 14px;
+            line-height: 1.75;
+            color: rgba(244, 239, 232, .8);
+            max-width: 360px;
+            margin-bottom: 24px;
+        }
+
+        .footer-sub-title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        /* newsletter */
+        .footer-news {
+            display: flex;
+            max-width: 360px;
+            margin-bottom: 26px;
+            border: 1px solid rgba(233, 168, 79, .4);
+            border-radius: 40px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, .04);
+            transition: border-color .25s;
+        }
+
+        .footer-news:focus-within {
+            border-color: var(--gold);
+        }
+
+        .footer-news input {
+            flex: 1;
+            min-width: 0;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 14px;
+            padding: 12px 18px;
+        }
+
+        .footer-news input::placeholder {
+            color: rgba(244, 239, 232, .5);
+        }
+
+        .footer-news button {
+            border: 0;
+            background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+            color: #1a1209;
+            width: 50px;
+            cursor: pointer;
+            transition: filter .25s;
+        }
+
+        .footer-news button:hover {
+            filter: brightness(1.1);
+        }
+
+        /* social */
+        .footer-social {
+            display: flex;
+            gap: 14px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: var(--text);
+            font-size: 15px;
+            transition: .25s;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: #1a1209;
+            transform: translateY(-3px);
+        }
+
+        /* ---------- link columns ---------- */
+        .footer-title {
+            position: relative;
+            color: var(--gold);
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 22px;
+            padding-bottom: 12px;
+        }
+
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 32px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(244, 239, 232, .8);
+            font-size: 14px;
+            transition: color .2s, padding .2s;
+        }
+
+        .footer-links a::before {
+            content: "\f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--gold);
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        /* ---------- contact ---------- */
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: rgba(244, 239, 232, .85);
+        }
+
+        .footer-contact .ic {
+            flex: 0 0 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(233, 168, 79, .12);
+            color: var(--gold);
+            display: grid;
+            place-items: center;
+            font-size: 14px;
+        }
+
+        .footer-contact small {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: rgba(244, 239, 232, .5);
+            margin-bottom: 1px;
+        }
+
+        .footer-contact a {
+            color: inherit;
+            word-break: break-word;
+        }
+
+        .footer-contact a:hover {
+            color: var(--gold);
+        }
+
+        /* shared gold button */
+        .footer-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+            color: #1a1209;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 13px 28px;
+            border-radius: 30px;
+            transition: .25s;
+            white-space: nowrap;
+        }
+
+        .footer-btn:hover {
+            color: #1a1209;
+            filter: brightness(1.08);
+            transform: translateY(-2px);
+        }
+
+        .footer-btn i {
+            transition: transform .25s;
+        }
+
+        .footer-btn:hover i {
+            transform: translateX(4px);
+        }
+
+        /* ---------- bottom bar ---------- */
+        .footer-bottom {
+            margin-top: 50px;
+            padding: 22px 0;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 13px;
+            color: rgba(244, 239, 232, .7);
+        }
+
+        .footer-legal {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-legal a {
+            color: rgba(244, 239, 232, .8);
+            padding: 0 14px;
+        }
+
+        .footer-legal a:first-child {
+            border-right: 1px solid rgba(255, 255, 255, .25);
+        }
+
+        .footer-legal a:last-child {
+            padding-right: 0;
+        }
+
+        .footer-legal a:hover {
+            color: var(--gold);
+        }
+
+        /* ---------- responsive ---------- */
+        .footer-wrap {
+            padding-top: 70px;
+        }
+
+        @media (max-width: 767.98px) {
+            .footer-wrap {
+                padding-top: 50px;
+            }
+
+            .footer-cta {
+                padding: 28px 22px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .footer-cta .footer-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 36px;
+            }
+
+            .footer-about,
+            .footer-news {
+                max-width: 100%;
+            }
+
+            .footer-contact+.footer-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+
+
+
+    <!-- footer html -->
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+
+            <!-- CTA band -->
+            <div class="footer-cta">
+                <div>
+                    <h3>Ready to create your <span>dream space?</span></h3>
+                    <p>Tell us about your project and get a free design consultation.</p>
+                </div>
+                <a href="#" class="footer-btn">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="row gy-5 footer-main">
+
+                <!-- brand -->
+                <div class="col-12 col-lg-4">
+                    <!-- replace ./assets/logo.png with your logo image -->
+                    <a href="index.html" class="footer-logo"><img src="./assets/logo.png" alt="Suntek Designs"></a>
+                    <p class="footer-about">
+                        With over 16 years of excellence, Suntek Designs—part of the Suntek Groups—is your
+                        trusted partner for high-end interior design solutions across residential,
+                        commercial, and retail spaces.
+                    </p>
+
+                    <ul class="footer-social">
+                        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- quick links -->
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Carpentry Workshop</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- services -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Residential Interiors</a></li>
+                        <li><a href="#">Commercial Interiors</a></li>
+                        <li><a href="#">Office Interiors</a></li>
+                        <li><a href="#">Turnkey Projects</a></li>
+                        <li><a href="#">Design Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- contact -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><span class="ic"><i class="fa-solid fa-location-dot"></i></span>
+                            <span><small>VISIT US</small>160 Changi Rd, #04-04 HexaCube, Singapore 419728</span>
+                        </li>
+                        <li><span class="ic"><i class="fa-solid fa-phone"></i></span>
+                            <span><small>CALL US</small><a href="tel:+6584637889">+65 8463 7889</a></span>
+                        </li>
+                        <li><span class="ic"><i class="fa-solid fa-envelope"></i></span>
+                            <span><small>EMAIL US</small><a
+                                    href="mailto:suntekdesigns@gmail.com">suntekdesigns@gmail.com</a></span>
+                        </li>
+                        <li><span class="ic"><i class="fa-solid fa-clock"></i></span>
+                            <span><small>WORKING HOURS</small>Mon - Sat, 10:00 AM - 7:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- bottom bar -->
+            <div class="footer-bottom">
+                <span>Copyright &copy; <span id="footerYear">2025</span> Suntek Designs Pte. Ltd | All Rights
+                    Reserved.</span>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('footerYear').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Scripts (same as index.html) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            var header = document.querySelector('.site-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.toggle('is-scrolled', window.scrollY > 40);
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
+    <script>
+        $(function () {
+            // close mobile menu after tapping a normal link (not the Services toggle)
+            $('#mainNav .nav-link:not(.dropdown-toggle), #mainNav .dropdown-item').on('click', function () {
+                if ($(window).width() < 992) $('#mainNav').collapse('hide');
+            });
+        });
+    </script>
+</body>
+
+</html>
