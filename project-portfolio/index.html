@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Client Testimonials | Suntek Designs</title>
+    <meta name="description"
+        content="Hear what our happy clients say about working with Suntek Designs Singapore. Trusted interior design services with proven results, quality, and satisfaction.">
+
+    <!-- Bootstrap 5 + Font -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- =========================================================
+     1) HEADER STYLE  (same as other pages)
+========================================================= -->
+    <style>
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        :root {
+            --gold: #e9a84f;
+            --gold-soft: #f3c982;
+            --ink: #000b0f;
+            --text: #f4efe8;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--ink);
+            color: var(--text);
+            margin: 0;
+        }
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1030;
+            padding: 18px 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, .75), transparent);
+            transition: padding .3s ease, background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
+        }
+
+        .site-header.is-scrolled {
+            padding: 10px 0;
+            background: rgba(9, 7, 5, .92);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .45);
+            border-bottom: 1px solid rgba(233, 168, 79, .18);
+        }
+
+        .site-header .navbar {
+            padding: 0;
+        }
+
+        .brand {
+            text-decoration: none;
+            line-height: 1;
+            display: inline-block;
+        }
+
+        .brand-main {
+            display: block;
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--text);
+        }
+
+        .brand-main b {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .brand-sub {
+            display: block;
+            font-size: 9px;
+            letter-spacing: 6px;
+            color: var(--gold);
+            text-align: center;
+            margin-top: 3px;
+        }
+
+        .site-header .nav-link {
+            color: var(--text);
+            font-size: 15px;
+            padding: 8px 4px;
+            margin: 0 14px;
+            border-bottom: 2px solid transparent;
+            transition: color .2s;
+        }
+
+        .site-header .nav-link:hover,
+        .site-header .nav-link.active {
+            color: var(--gold);
+        }
+
+        .site-header .nav-link.active {
+            border-bottom-color: var(--gold);
+        }
+
+        .site-header .dropdown-menu {
+            background: rgba(18, 14, 10, .97);
+            border: 1px solid rgba(233, 168, 79, .3);
+            border-radius: 10px;
+            padding: 8px;
+            min-width: 220px;
+            margin-top: -7px;
+        }
+
+        .site-header .dropdown-item {
+            color: var(--text);
+            font-size: 14px;
+            padding: 9px 14px;
+            border-radius: 6px;
+        }
+
+        .site-header .dropdown-item:hover {
+            background: rgba(233, 168, 79, .15);
+            color: var(--gold);
+        }
+
+        .btn-quote {
+            color: var(--text);
+            border: 1px solid var(--gold);
+            border-radius: 30px;
+            padding: 9px 24px;
+            font-size: 15px;
+            background: transparent;
+            transition: .25s;
+        }
+
+        .btn-quote:hover {
+            background: var(--gold);
+            color: #1a1209;
+        }
+
+        .navbar-toggler {
+            border: 1px solid var(--gold);
+            padding: 6px 10px;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        @media (min-width:992px) {
+            .site-header .dropdown:hover>.dropdown-menu {
+                display: block;
+            }
+        }
+
+        @media (max-width:991.98px) {
+            .site-header {
+                background: rgba(0, 0, 0, .85);
+                padding: 12px 0;
+            }
+
+            .site-header.is-scrolled {
+                padding: 10px 0;
+                background: rgba(9, 7, 5, .95);
+            }
+
+            .site-header .navbar-collapse {
+                background: rgba(14, 11, 8, .98);
+                margin-top: 14px;
+                padding: 10px 18px 20px;
+                border: 1px solid rgba(233, 168, 79, .25);
+                border-radius: 12px;
+                max-height: calc(100vh - 90px);
+                overflow-y: auto;
+            }
+
+            .site-header .nav-link {
+                margin: 0;
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, .08);
+            }
+
+            .site-header .nav-link.active {
+                border-bottom-color: rgba(255, 255, 255, .08);
+            }
+
+            .site-header .dropdown-menu {
+                background: transparent;
+                border: 0;
+                padding: 0 0 0 12px;
+                margin: 0;
+            }
+
+            .btn-quote {
+                display: block;
+                text-align: center;
+                margin-top: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+     2) HEADER TAG  (same as other pages)
+========================================================= -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+
+                <a class="brand" href="index.html">
+                    <span class="brand-main">SUN<b>TEK</b></span>
+                    <span class="brand-sub">DESIGNS</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="index.html">About Us</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="../team/">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../testimonials/">Testimonials</a></li>
+
+                        <!-- Services dropdown -->
+                        <!-- <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="servicesDrop" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                                            <ul class="dropdown-menu" aria-labelledby="servicesDrop">
+                                                <li><a class="dropdown-item" href="#">Residential Interiors</a></li>
+                                                <li><a class="dropdown-item" href="#">Office Interiors</a></li>
+                                                <li><a class="dropdown-item" href="#">Commercial Spaces</a></li>
+                                                <li><a class="dropdown-item" href="#">Modular Kitchens</a></li>
+                                                <li><a class="dropdown-item" href="#">Fit-out Solutions</a></li>
+                                            </ul>
+                                        </li> -->
+
+                        <li class="nav-item"><a class="nav-link active" href="../project-portfolio/">Portfolio</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="../contact-us/">Contact Us</a></li>
+                    </ul>
+
+                    <a href="../contact-us/" class="btn-quote">Get a Quote &rarr;</a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- =========================================================
+     PORTFOLIO PAGE - ADVANCED  (paste between the header and the footer)
+     Header / footer / <head> / bottom scripts = same as your other pages
+     Title: <title>Project Portfolio | Suntek Designs</title>
+========================================================= -->
+
+
+
+
+
+
+    <!-- =========================================================
+     1) PORTFOLIO BANNER - STYLE
+========================================================= -->
+    <style>
+        .portfolio-banner {
+            position: relative;
+            padding: 170px 0 80px;
+            background: var(--ink);
+            overflow: hidden;
+            border-bottom: 1px solid rgba(233, 168, 79, .15);
+        }
+
+        .portfolio-banner-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .28;
+        }
+
+        .portfolio-banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 11, 15, .55), var(--ink) 98%);
+        }
+
+        .portfolio-banner .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .portfolio-crumbs {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            margin: 0 0 18px;
+            padding: 0;
+            font-size: 14px;
+            color: rgba(244, 239, 232, .6);
+        }
+
+        .portfolio-crumbs a {
+            color: rgba(244, 239, 232, .8);
+            transition: color .2s;
+        }
+
+        .portfolio-crumbs a:hover {
+            color: var(--gold);
+        }
+
+        .portfolio-crumbs li+li::before {
+            content: "\f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--gold);
+            margin-right: 10px;
+            font-size: 12px;
+        }
+
+        .portfolio-banner h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            font-weight: 400;
+            line-height: 1.08;
+            margin: 0 0 16px;
+        }
+
+        .portfolio-banner h1 span {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .portfolio-banner p {
+            max-width: 520px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(244, 239, 232, .8);
+            margin: 0;
+        }
+
+        @media (max-width: 767.98px) {
+            .portfolio-banner {
+                padding: 130px 0 60px;
+            }
+        }
+    </style>
+
+    <!-- =========================================================
+     2) PORTFOLIO BANNER - SECTION TAG
+========================================================= -->
+    <section class="portfolio-banner">
+        <img class="portfolio-banner-bg" src="https://suntekdesigns.com/wp-content/uploads/2024/05/meyer5-1024x691.jpg"
+            alt="">
+        <div class="container">
+            <ul class="portfolio-crumbs">
+                <li><a href="index.html">Home</a></li>
+                <li>Project Portfolio</li>
+            </ul>
+            <h1>Spaces we have <span>brought to life.</span></h1>
+            <p>Explore our interior design projects across Singapore, from HDB flats and condominiums to landed homes.
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- =========================================================
+     3) PORTFOLIO PROJECTS - STYLE
+========================================================= -->
+    <style>
+        .portfolio-projects {
+            padding: 90px 0 100px;
+            background: var(--ink);
+        }
+
+        .portfolio-head {
+            max-width: 620px;
+            margin: 0 auto 44px;
+            text-align: center;
+        }
+
+        .portfolio-eyebrow {
+            color: var(--gold);
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0 0 12px;
+        }
+
+        .portfolio-title {
+            font-size: clamp(30px, 4.5vw, 52px);
+            font-weight: 400;
+            line-height: 1.1;
+            margin: 0;
+        }
+
+        /* ---------- toolbar (search + filters) ---------- */
+        .portfolio-toolbar {
+            padding: 22px 24px;
+            margin-bottom: 36px;
+            border: 1px solid rgba(233, 168, 79, .25);
+            border-radius: 18px;
+            background: #120d08;
+        }
+
+        .portfolio-toolbar-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .portfolio-search {
+            position: relative;
+            flex: 1 1 280px;
+            max-width: 380px;
+        }
+
+        .portfolio-search i {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold);
+            font-size: 14px;
+            pointer-events: none;
+        }
+
+        .portfolio-search input {
+            width: 100%;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(233, 168, 79, .35);
+            border-radius: 40px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 14px;
+            padding: 12px 18px 12px 44px;
+            outline: 0;
+            transition: border-color .25s, box-shadow .25s;
+        }
+
+        .portfolio-search input::placeholder {
+            color: rgba(244, 239, 232, .45);
+        }
+
+        .portfolio-search input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(233, 168, 79, .18);
+        }
+
+        .portfolio-count {
+            font-size: 14px;
+            color: rgba(244, 239, 232, .65);
+        }
+
+        .portfolio-count b {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .portfolio-filter-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-filter-row+.portfolio-filter-row {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .portfolio-filter-label {
+            flex: 0 0 90px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(244, 239, 232, .5);
+        }
+
+        .portfolio-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .portfolio-filter button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, .14);
+            border-radius: 40px;
+            color: rgba(244, 239, 232, .8);
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 9px 18px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: color .25s, border-color .25s, background .25s;
+        }
+
+        .portfolio-filter button small {
+            font-size: 11px;
+            min-width: 20px;
+            padding: 2px 6px;
+            border-radius: 20px;
+            background: rgba(233, 168, 79, .15);
+            color: var(--gold);
+            text-align: center;
+            transition: background .25s, color .25s;
+        }
+
+        .portfolio-filter button:hover {
+            color: var(--gold);
+            border-color: rgba(233, 168, 79, .5);
+        }
+
+        .portfolio-filter button.active {
+            background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+            border-color: transparent;
+            color: #1a1209;
+        }
+
+        .portfolio-filter button.active small {
+            background: rgba(26, 18, 9, .18);
+            color: #1a1209;
+        }
+
+        .portfolio-filter button:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        /* ---------- grid ---------- */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .portfolio-card {
+            position: relative;
+            display: block;
+            aspect-ratio: 770 / 892;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .12);
+            color: var(--text);
+            background: #17120d;
+            cursor: pointer;
+            transition: transform .3s, border-color .3s, box-shadow .3s;
+            animation: portfolioIn .5s ease both;
+        }
+
+        .portfolio-card.is-hidden {
+            display: none;
+        }
+
+        @keyframes portfolioIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        .portfolio-card img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .7s;
+        }
+
+        .portfolio-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 45%, rgba(8, 6, 4, .92) 100%);
+            opacity: 0;
+            transition: opacity .35s;
+        }
+
+        /* property type tag, always visible */
+        .portfolio-type {
+            position: absolute;
+            z-index: 3;
+            top: 16px;
+            left: 16px;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text);
+            background: rgba(0, 11, 15, .65);
+            border: 1px solid rgba(233, 168, 79, .55);
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+        }
+
+        .portfolio-info {
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 22px 70px 22px 22px;
+            transform: translateY(14px);
+            opacity: 0;
+            transition: transform .35s, opacity .35s;
+        }
+
+        .portfolio-cat {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+
+        .portfolio-info h3 {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.3;
+            margin: 0;
+        }
+
+        .portfolio-arrow {
+            position: absolute;
+            z-index: 2;
+            right: 20px;
+            bottom: 22px;
+            width: 38px;
+            height: 38px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: var(--gold);
+            font-size: 13px;
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity .35s, transform .35s, background .25s, color .25s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: 0 18px 40px rgba(233, 168, 79, .18);
+        }
+
+        .portfolio-card:hover img {
+            transform: scale(1.07);
+        }
+
+        .portfolio-card:hover::before,
+        .portfolio-card:hover .portfolio-info,
+        .portfolio-card:hover .portfolio-arrow,
+        .portfolio-card:focus-visible::before,
+        .portfolio-card:focus-visible .portfolio-info,
+        .portfolio-card:focus-visible .portfolio-arrow {
+            opacity: 1;
+            transform: none;
+        }
+
+        .portfolio-card:hover .portfolio-arrow {
+            background: var(--gold);
+            color: #1a1209;
+        }
+
+        .portfolio-card:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        /* ---------- empty state ---------- */
+        .portfolio-empty {
+            display: none;
+            text-align: center;
+            padding: 70px 20px;
+            border: 1px dashed rgba(233, 168, 79, .35);
+            border-radius: 18px;
+            background: #120d08;
+        }
+
+        .portfolio-empty.is-on {
+            display: block;
+        }
+
+        .portfolio-empty i {
+            font-size: 30px;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+
+        .portfolio-empty h3 {
+            font-size: 22px;
+            font-weight: 500;
+            margin: 0 0 8px;
+        }
+
+        .portfolio-empty p {
+            font-size: 14px;
+            color: rgba(244, 239, 232, .65);
+            margin: 0 0 22px;
+        }
+
+        .portfolio-reset {
+            background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+            color: #1a1209;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 500;
+            border: 0;
+            border-radius: 40px;
+            padding: 12px 28px;
+            cursor: pointer;
+            transition: .25s;
+        }
+
+        .portfolio-reset:hover {
+            filter: brightness(1.08);
+            transform: translateY(-2px);
+        }
+
+        /* ---------- quick view (lightbox) ---------- */
+        .portfolio-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(0, 6, 9, .88);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+        }
+
+        .portfolio-modal.is-open {
+            display: flex;
+            animation: portfolioFade .3s ease both;
+        }
+
+        @keyframes portfolioFade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .portfolio-modal-box {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            width: 100%;
+            max-width: 980px;
+            max-height: calc(100vh - 48px);
+            border: 1px solid rgba(233, 168, 79, .4);
+            border-radius: 22px;
+            overflow: hidden;
+            background: #120d08;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, .7);
+        }
+
+        .portfolio-modal-media {
+            position: relative;
+            min-height: 420px;
+            background: #17120d;
+        }
+
+        .portfolio-modal-media img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity .25s;
+        }
+
+        .portfolio-modal-media img.is-swapping {
+            opacity: 0;
+        }
+
+        .portfolio-modal-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 14px;
+            padding: 44px 40px;
+            overflow-y: auto;
+        }
+
+        .portfolio-modal-cat {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .portfolio-modal-title {
+            font-size: clamp(24px, 3vw, 32px);
+            font-weight: 500;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .portfolio-modal-meta {
+            list-style: none;
+            margin: 6px 0 10px;
+            padding: 0;
+        }
+
+        .portfolio-modal-meta li {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 12px 0;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            color: rgba(244, 239, 232, .85);
+        }
+
+        .portfolio-modal-meta li span {
+            color: rgba(244, 239, 232, .5);
+        }
+
+        .portfolio-modal-btn {
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+            color: #1a1209;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 13px 28px;
+            border-radius: 40px;
+            transition: .25s;
+        }
+
+        .portfolio-modal-btn:hover {
+            color: #1a1209;
+            filter: brightness(1.08);
+            transform: translateY(-2px);
+        }
+
+        .portfolio-modal-btn i {
+            transition: transform .25s;
+        }
+
+        .portfolio-modal-btn:hover i {
+            transform: translateX(4px);
+        }
+
+        .portfolio-modal-counter {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: rgba(244, 239, 232, .5);
+        }
+
+        .portfolio-modal-close,
+        .portfolio-modal-nav {
+            position: absolute;
+            z-index: 5;
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            background: rgba(0, 11, 15, .7);
+            color: var(--gold);
+            font-size: 14px;
+            cursor: pointer;
+            transition: background .25s, color .25s;
+        }
+
+        .portfolio-modal-close:hover,
+        .portfolio-modal-nav:hover {
+            background: var(--gold);
+            color: #1a1209;
+        }
+
+        .portfolio-modal-close:focus-visible,
+        .portfolio-modal-nav:focus-visible {
+            outline: 2px solid var(--text);
+            outline-offset: 2px;
+        }
+
+        .portfolio-modal-close {
+            top: 16px;
+            right: 16px;
+        }
+
+        .portfolio-modal-prev {
+            left: 16px;
+            bottom: 16px;
+        }
+
+        .portfolio-modal-next {
+            left: 66px;
+            bottom: 16px;
+        }
+
+        body.portfolio-lock {
+            overflow: hidden;
+        }
+
+        /* ---------- responsive ---------- */
+        @media (max-width: 991.98px) {
+            .portfolio-projects {
+                padding: 70px 0;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .portfolio-modal {
+                padding: 12px;
+                align-items: flex-start;
+                overflow-y: auto;
+            }
+
+            .portfolio-modal-box {
+                grid-template-columns: minmax(0, 1fr);
+                max-height: none;
+            }
+
+            .portfolio-modal-media {
+                min-height: 0;
+                aspect-ratio: 4 / 3.4;
+            }
+
+            .portfolio-modal-body {
+                padding: 28px 22px 32px;
+            }
+
+            .portfolio-filter-label {
+                flex-basis: 100%;
+            }
+
+            .portfolio-filter {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                max-width: 100%;
+                padding-bottom: 6px;
+                scrollbar-width: none;
+            }
+
+            .portfolio-filter::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .portfolio-projects {
+                padding: 60px 0;
+            }
+
+            .portfolio-toolbar {
+                padding: 18px 16px;
+            }
+
+            .portfolio-search {
+                max-width: 100%;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        /* touch screens have no hover, so always show the title */
+        @media (hover: none) {
+
+            .portfolio-card::before,
+            .portfolio-info,
+            .portfolio-arrow {
+                opacity: 1;
+                transform: none;
+            }
+
+            .portfolio-card:hover {
+                transform: none;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .portfolio-card,
+            .portfolio-modal.is-open {
+                animation: none;
+            }
+        }
+    </style>
+
+    <!-- =========================================================
+     4) PORTFOLIO PROJECTS - SECTION TAG
+========================================================= -->
+    <section class="portfolio-projects" id="portfolio">
+        <div class="container">
+
+            <div class="portfolio-head">
+                <p class="portfolio-eyebrow">Since 1986</p>
+                <h2 class="portfolio-title">Our Projects</h2>
+            </div>
+
+            <!-- toolbar: search + count + 2 filter rows -->
+            <div class="portfolio-toolbar">
+                <div class="portfolio-toolbar-top">
+                    <div class="portfolio-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="portfolioSearch" placeholder="Search by project or area"
+                            aria-label="Search projects">
+                    </div>
+                    <p class="portfolio-count" id="portfolioCount" aria-live="polite">Showing <b>11</b> of 11 projects
+                    </p>
+                </div>
+
+                <div class="portfolio-filter-row">
+                    <span class="portfolio-filter-label">Style</span>
+                    <ul class="portfolio-filter" id="portfolioCatFilter">
+                        <li><button type="button" class="active" data-filter="all">All <small>11</small></button></li>
+                        <li><button type="button" data-filter="architecture">Architecture <small>1</small></button></li>
+                        <li><button type="button" data-filter="decor">Decor <small>5</small></button></li>
+                        <li><button type="button" data-filter="furniture">Furniture <small>2</small></button></li>
+                        <li><button type="button" data-filter="interior">Interior <small>3</small></button></li>
+                    </ul>
+                </div>
+
+                <div class="portfolio-filter-row">
+                    <span class="portfolio-filter-label">Property</span>
+                    <ul class="portfolio-filter" id="portfolioTypeFilter">
+                        <li><button type="button" class="active" data-filter="all">All <small>11</small></button></li>
+                        <li><button type="button" data-filter="hdb">HDB <small>5</small></button></li>
+                        <li><button type="button" data-filter="condominium">Condominium <small>4</small></button></li>
+                        <li><button type="button" data-filter="landed">Landed House <small>2</small></button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- grid -->
+            <div class="portfolio-grid" id="portfolioGrid">
+
+                <a href="#" class="portfolio-card" data-cat="interior" data-type="condominium" data-cat-label="Interior"
+                    data-type-label="Condominium" data-title="The Bayshore – Condominium"
+                    data-img="https://suntekdesigns.com/wp-content/uploads/2025/07/4-770x892.jpg">
+                    <img src="https://suntekdesigns.com/wp-content/uploads/2025/07/4-770x892.jpg"
+                        alt="The Bayshore Condominium" loading="lazy">
+                    <span class="portfolio-type">Condominium</span>
+                    <div class="portfolio-info">
+                        <span class="portfolio-cat">Interior</span>
+                        <h3>The Bayshore – Condominium</h3>
+                    </div>
+                    <span class="portfolio-arrow"><i class="fa-solid fa-expand"></i></span>
+                </a>
+
+                <a href="#" class="portfolio-card" data-cat="decor" data-type="hdb" data-cat-label="Decor"
+                    data-type-label="HDB Resale Flat" data-title="Blk 712 Tampines St 71 – HDB Resale Flat"
+                    data-img="https://suntekdesigns.com/wp-content/uploads/2025/07/18-1-770x892.jpg">
+                    <img src="https://suntekdesigns.com/wp-content/uploads/2025/07/18-1-770x892.jpg"
+                        alt="Blk 712 Tampines St 71 HDB Resale Flat" loading="lazy">
+                    <span class="portfolio-type">HDB</span>
+                    <div class="portfolio-info">
+                        <span class="portfolio-cat">Decor</span>
+                        <h3>Blk 712 Tampines St 71 – HDB Resale Flat</h3>
+                    </div>
+                    <span class="portfolio-arrow"><i class="fa-solid fa-expand"></i></span>
+                </a>
+
+                <a href="#" class="portfolio-card" data-cat="interior" data-type="condominium" data-cat-label="Interior"
+                    data-type-label="Condominium" data-title="The Sea Horizon – Condominium"
+                    data-img="https://suntekdesigns.com/wp-content/uploads/2025/07/4_1-1-770x892.jpg">
+                    <img src="https://suntekdesigns.com/wp-content/uploads/2025/07/4_1-1-770x892.jpg"
+                        alt="The Sea Horizon Condominium" loading="lazy">
+                    <span class="portfolio-type">Condominium</span>
+                    <div class="portfolio-info">
+                        <span class="portfolio-cat">Interior</span>
+                        <h3>The Sea Horizon – Condominium</h3>
+                    </div>
+                    <span class="portfolio-arrow"><i class="fa-solid fa-expand"></i></span>
+                </a>
+
+                <a href="#" class="portfolio-card" data-cat="decor" data-type="hdb" data-cat-label="Decor"
+                    data-type-label="HDB Executive Maisonette"
+                    data-title="Blk 469 Jurong West – HDB Executive Maisonette"
+                    data-img="https://suntekdesigns.com/wp-content/uploads/2025/07/1-1-770x892.jpg">
+                    <img src="https://suntekdesigns.com/wp-content/uploads/2025/07/1-1-770x892.jpg"
+                        alt="Blk 469 Jurong West HDB Executive Maisonette" loading="lazy">
+                    <span class="portfolio-type">HDB</span>
+                    <div class="portfolio-info">
+                        <span class="portfolio-cat">Decor</span>
+                        <h3>Blk 469 Jurong West – HDB Executive Maisonette</h3>
+                    </div>
+                    <span class="portfolio-arrow"><i class="fa-solid fa-expand"></i></span>
+                </a>
+
+                <a href="#" class="portfolio-card" data-cat="interior" data-type="condominium" data-cat-label="Interior"
+                    data-type-label="Condominium" data-title="The Central Green Condominium"
+                    data-img="https://suntekdesigns.com/wp-content/uploads/2025/07/74-770x892.jpg">
+                    <img src="https://suntekdesigns.com/wp-content/uploads/2025/07/74-770x892.jpg"
+                        alt="The Central Green Condominium" loading="lazy">
+                    <span class="portfolio-type">Condominium</span>
+                    <div class="portfolio-info">
+                        <span class="portfolio-cat">Interior</span>
+                        <h3>The Central Green Condominium</h3>
+                    </div>
+                    <span class="portfolio-arrow"><i class="fa-solid fa-expand"></i></span>
+                </a>
+
+                <a href="#" class="portfolio-card" data-cat="decor" data-type="hdb" data-cat-label="Decor"
+                    data-type-label="HDB BTO" data-title="450B Sengkang HDB BTO"
+                    data-img="https://suntekdesigns.com/wp-content/uploads/2024/05/HDB1-770x892.jpg">
+                    <img src="https://suntekdesigns.com/wp-content/uploads/2024/05/HDB1-770x892.jpg"
+                        alt="450B Sengkang HDB BTO" loading="lazy">
+                    <span class="portfolio-type">HDB</span>
+                    <div class="portfolio-info">
+                        <span class="portfolio-cat">Decor</span>
+                        <h3>450B Sengkang HDB BTO</h3>
+                    </div>
+                    <span class="portfolio-arrow"><i class="fa-solid fa-expand"></i></span>
+                </a>
+
+                <a href="#" class="portfolio-card" data-cat="architecture" data-type="condominium"
+                    data-cat-label="Architecture" data-type-label="Condominium" data-title="Bartley Ridge Condominium"
+                    data-img="https://suntekdesigns.com/wp-content/uploads/2024/05/BRC7-770x892.jpg">
+                    <img src="https://suntekdesigns.com/wp-content/uploads/2024/05/BRC7-770x892.jpg"
+                        alt="Bartley Ridge Condominium" loading="lazy">
+                    <span class="portfolio-type">Condominium</span>
+                    <div class="portfolio-info">
+                        <span class="portfolio-cat">Architecture</span>
+                        <h3>Bartley Ridge Condominium</h3>
+                    </div>
+                    <span class="portfolio-arrow"><i class="fa-solid fa-expand"></i></span>
+                </a>
+
+                <a href="#" class="portfolio-card" data-cat="decor" data-type="hdb" data-cat-label="Decor"
+                    data-type-label="HDB" data-title="273B Bishan HDB"
+                    data-img="https://suntekdesigns.com/wp-content/uploads/2024/05/Bishan1-770x892.jpg">
+                    <img src="https://suntekdesigns.com/wp-content/uploads/2024/05/Bishan1-770x892.jpg"
+                        alt="273B Bishan HDB" loading="lazy">
+                    <span class="portfolio-type">HDB</span>
+                    <div class="portfolio-info">
+                        <span class="portfolio-cat">Decor</span>
+                        <h3>273B Bishan HDB</h3>
+                    </div>
+                    <span class="portfolio-arrow"><i class="fa-solid fa-expand"></i></span>
+                </a>
+
+                <a href="#" class="portfolio-card" data-cat="furniture" data-type="landed" data-cat-label="Furniture"
+                    data-type-label="Landed House" data-title="Meyer Road Landed House"
+                    data-img="https://suntekdesigns.com/wp-content/uploads/2024/05/meyer5-770x892.jpg">
+                    <img src="https://suntekdesigns.com/wp-content/uploads/2024/05/meyer5-770x892.jpg"
+                        alt="Meyer Road Landed House" loading="lazy">
+                    <span class="portfolio-type">Landed House</span>
+                    <div class="portfolio-info">
+                        <span class="portfolio-cat">Furniture</span>
+                        <h3>Meyer Road Landed House</h3>
+                    </div>
+                    <span class="portfolio-arrow"><i class="fa-solid fa-expand"></i></span>
+                </a>
+
+                <a href="#" class="portfolio-card" data-cat="decor" data-type="landed" data-cat-label="Decor"
+                    data-type-label="Landed House" data-title="Kew Avenue Landed House"
+                    data-img="https://suntekdesigns.com/wp-content/uploads/2024/05/Kew2-770x892.jpg">
+                    <img src="https://suntekdesigns.com/wp-content/uploads/2024/05/Kew2-770x892.jpg"
+                        alt="Kew Avenue Landed House" loading="lazy">
+                    <span class="portfolio-type">Landed House</span>
+                    <div class="portfolio-info">
+                        <span class="portfolio-cat">Decor</span>
+                        <h3>Kew Avenue Landed House</h3>
+                    </div>
+                    <span class="portfolio-arrow"><i class="fa-solid fa-expand"></i></span>
+                </a>
+
+                <a href="#" class="portfolio-card" data-cat="furniture" data-type="hdb" data-cat-label="Furniture"
+                    data-type-label="HDB" data-title="186 Toa Payoh HDB"
+                    data-img="https://suntekdesigns.com/wp-content/uploads/2024/05/HDB2-770x892.jpg">
+                    <img src="https://suntekdesigns.com/wp-content/uploads/2024/05/HDB2-770x892.jpg"
+                        alt="186 Toa Payoh HDB" loading="lazy">
+                    <span class="portfolio-type">HDB</span>
+                    <div class="portfolio-info">
+                        <span class="portfolio-cat">Furniture</span>
+                        <h3>186 Toa Payoh HDB</h3>
+                    </div>
+                    <span class="portfolio-arrow"><i class="fa-solid fa-expand"></i></span>
+                </a>
+
+            </div>
+
+            <!-- empty state (shown when nothing matches) -->
+            <div class="portfolio-empty" id="portfolioEmpty">
+                <i class="fa-regular fa-folder-open"></i>
+                <h3>No projects found</h3>
+                <p>Try a different search word or clear the filters.</p>
+                <button type="button" class="portfolio-reset" id="portfolioReset">Clear filters</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- quick view (opens when a project card is clicked) -->
+    <div class="portfolio-modal" id="portfolioModal" role="dialog" aria-modal="true"
+        aria-labelledby="portfolioModalTitle">
+        <div class="portfolio-modal-box">
+
+            <button type="button" class="portfolio-modal-close" id="portfolioClose" aria-label="Close"><i
+                    class="fa-solid fa-xmark"></i></button>
+
+            <div class="portfolio-modal-media">
+                <img id="portfolioModalImg" src="" alt="">
+                <button type="button" class="portfolio-modal-nav portfolio-modal-prev" id="portfolioPrev"
+                    aria-label="Previous project"><i class="fa-solid fa-arrow-left"></i></button>
+                <button type="button" class="portfolio-modal-nav portfolio-modal-next" id="portfolioNext"
+                    aria-label="Next project"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="portfolio-modal-body">
+                <span class="portfolio-modal-counter" id="portfolioModalCounter">1 / 11</span>
+                <span class="portfolio-modal-cat" id="portfolioModalCat">Interior</span>
+                <h3 class="portfolio-modal-title" id="portfolioModalTitle">Project title</h3>
+                <ul class="portfolio-modal-meta">
+                    <li><span>Style</span><b id="portfolioModalStyle">Interior</b></li>
+                    <li><span>Property</span><b id="portfolioModalProperty">HDB</b></li>
+                    <li><span>Studio</span><b>Suntek Designs</b></li>
+                </ul>
+                <a href="contact.html" class="portfolio-modal-btn">Plan a similar space <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- =========================================================
+     5) PORTFOLIO PROJECTS - SCRIPT
+     search + 2 filters combined, count, empty state, quick view with prev/next + keyboard
+========================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var cards = Array.prototype.slice.call(document.querySelectorAll('#portfolioGrid .portfolio-card'));
+            var catBtns = document.querySelectorAll('#portfolioCatFilter button');
+            var typeBtns = document.querySelectorAll('#portfolioTypeFilter button');
+            var search = document.getElementById('portfolioSearch');
+            var count = document.getElementById('portfolioCount');
+            var empty = document.getElementById('portfolioEmpty');
+            var reset = document.getElementById('portfolioReset');
+
+            var modal = document.getElementById('portfolioModal');
+            var mImg = document.getElementById('portfolioModalImg');
+            var mTitle = document.getElementById('portfolioModalTitle');
+            var mCat = document.getElementById('portfolioModalCat');
+            var mStyle = document.getElementById('portfolioModalStyle');
+            var mProp = document.getElementById('portfolioModalProperty');
+            var mCounter = document.getElementById('portfolioModalCounter');
+            var closeBtn = document.getElementById('portfolioClose');
+            var prevBtn = document.getElementById('portfolioPrev');
+            var nextBtn = document.getElementById('portfolioNext');
+
+            var state = { cat: 'all', type: 'all', q: '' };
+            var current = 0, lastFocus = null;
+
+            function visibleCards() {
+                return cards.filter(function (c) { return !c.classList.contains('is-hidden'); });
+            }
+
+            // ---------- filtering ----------
+            function apply() {
+                var q = state.q.trim().toLowerCase();
+
+                cards.forEach(function (card) {
+                    var okCat = state.cat === 'all' || card.dataset.cat === state.cat;
+                    var okType = state.type === 'all' || card.dataset.type === state.type;
+                    var okText = !q || card.dataset.title.toLowerCase().indexOf(q) > -1;
+                    var show = okCat && okType && okText;
+
+                    card.classList.toggle('is-hidden', !show);
+
+                    // restart the fade-in animation for visible cards
+                    if (show) {
+                        card.style.animation = 'none';
+                        void card.offsetWidth;
+                        card.style.animation = '';
+                    }
+                });
+
+                var shown = visibleCards().length;
+                count.innerHTML = 'Showing <b>' + shown + '</b> of ' + cards.length + ' projects';
+                empty.classList.toggle('is-on', shown === 0);
+            }
+
+            function setActive(buttons, btn) {
+                buttons.forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+            }
+
+            catBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    state.cat = btn.dataset.filter;
+                    setActive(catBtns, btn);
+                    apply();
+                });
+            });
+
+            typeBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    state.type = btn.dataset.filter;
+                    setActive(typeBtns, btn);
+                    apply();
+                });
+            });
+
+            search.addEventListener('input', function () {
+                state.q = search.value;
+                apply();
+            });
+
+            reset.addEventListener('click', function () {
+                state = { cat: 'all', type: 'all', q: '' };
+                search.value = '';
+                setActive(catBtns, catBtns[0]);
+                setActive(typeBtns, typeBtns[0]);
+                apply();
+            });
+
+            // ---------- quick view ----------
+            function fill(card, animate) {
+                var list = visibleCards();
+                current = list.indexOf(card);
+
+                function swap() {
+                    mImg.src = card.dataset.img;
+                    mImg.alt = card.dataset.title;
+                    mTitle.textContent = card.dataset.title;
+                    mCat.textContent = card.dataset.catLabel;
+                    mStyle.textContent = card.dataset.catLabel;
+                    mProp.textContent = card.dataset.typeLabel;
+                    mCounter.textContent = (current + 1) + ' / ' + list.length;
+                    mImg.classList.remove('is-swapping');
+                }
+
+                if (animate) {
+                    mImg.classList.add('is-swapping');
+                    setTimeout(swap, 200);
+                } else {
+                    swap();
+                }
+
+                prevBtn.style.display = nextBtn.style.display = list.length > 1 ? '' : 'none';
+            }
+
+            function openModal(card) {
+                lastFocus = document.activeElement;
+                fill(card, false);
+                modal.classList.add('is-open');
+                document.body.classList.add('portfolio-lock');
+                closeBtn.focus();
+            }
+
+            function closeModal() {
+                modal.classList.remove('is-open');
+                document.body.classList.remove('portfolio-lock');
+                if (lastFocus) lastFocus.focus();
+            }
+
+            function step(dir) {
+                var list = visibleCards();
+                if (!list.length) return;
+                var next = (current + dir + list.length) % list.length;
+                fill(list[next], true);
+            }
+
+            cards.forEach(function (card) {
+                card.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    openModal(card);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            prevBtn.addEventListener('click', function () { step(-1); });
+            nextBtn.addEventListener('click', function () { step(1); });
+
+            // click on the dark backdrop closes it
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) closeModal();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (!modal.classList.contains('is-open')) return;
+                if (e.key === 'Escape') closeModal();
+                if (e.key === 'ArrowLeft') step(-1);
+                if (e.key === 'ArrowRight') step(1);
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- =========================================================
+     FLOATING BUTTONS - STYLE
+========================================================= -->
+    <style>
+        .wa-float,
+        .to-top {
+            position: fixed;
+            right: 22px;
+            z-index: 1040;
+            /* above the header (1030) */
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            text-decoration: none;
+        }
+
+        /* WhatsApp: always visible, bottom-most */
+        .wa-float {
+            bottom: 22px;
+            background: #25d366;
+            color: #fff;
+            font-size: 28px;
+            box-shadow: 0 8px 22px rgba(37, 211, 102, .45);
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .wa-float:hover {
+            color: #fff;
+            transform: translateY(-3px) scale(1.06);
+            box-shadow: 0 12px 28px rgba(37, 211, 102, .6);
+        }
+
+        /* soft pulse ring */
+        .wa-float::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 2px solid #25d366;
+            animation: waPulse 2s ease-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes waPulse {
+            from {
+                transform: scale(1);
+                opacity: .7;
+            }
+
+            to {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+        }
+
+        /* Scroll to top: sits above WhatsApp, hidden until user scrolls */
+        .to-top {
+            bottom: 90px;
+            /* 22px + 54px button + 14px gap */
+            border: 1px solid var(--gold);
+            background: rgba(9, 7, 5, .92);
+            color: var(--gold);
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, .5);
+
+            /* hidden state */
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(14px);
+            transition: opacity .3s, visibility .3s, transform .3s, background .25s, color .25s;
+        }
+
+        .to-top.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+
+        .to-top:hover {
+            background: var(--gold);
+            color: #1a1209;
+        }
+
+        .to-top:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 575.98px) {
+
+            .wa-float,
+            .to-top {
+                right: 14px;
+                width: 48px;
+                height: 48px;
+            }
+
+            .wa-float {
+                bottom: 14px;
+                font-size: 25px;
+            }
+
+            .to-top {
+                bottom: 74px;
+                font-size: 16px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .wa-float::before {
+                animation: none;
+            }
+        }
+    </style>
+
+    <!-- =========================================================
+     FLOATING BUTTONS - HTML
+========================================================= -->
+    <a href="https://wa.me/6584637889?text=Hi%20Suntek%20Designs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20interior%20design%20services."
+        class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <button type="button" class="to-top" id="toTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- =========================================================
+       FLOATING BUTTONS - SCRIPT
+  ========================================================= -->
+    <script>
+        (function () {
+            var toTop = document.getElementById('toTop');
+            if (!toTop) return;
+
+            // show only after the user has scrolled down 400px
+            function onScroll() {
+                toTop.classList.toggle('is-visible', window.scrollY > 400);
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            toTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- =========================================================
+     8) FOOTER STYLE  (same as other pages)
+========================================================= -->
+    <style>
+        .site-footer {
+            position: relative;
+            background: #090705;
+            border-top: 1px solid rgba(233, 168, 79, .15);
+            overflow: hidden;
+        }
+
+        .site-footer::before {
+            content: "";
+            position: absolute;
+            left: -180px;
+            top: 40px;
+            width: 520px;
+            height: 520px;
+            background: radial-gradient(circle, rgba(233, 168, 79, .13), transparent 68%);
+            pointer-events: none;
+        }
+
+        .site-footer>.container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-cta {
+            padding: 36px 40px;
+            border: 1px solid rgba(233, 168, 79, .3);
+            border-radius: 18px;
+            background: linear-gradient(120deg, rgba(233, 168, 79, .16), rgba(233, 168, 79, .03));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+            background-color: #120d08;
+        }
+
+        .footer-cta h3 {
+            font-size: clamp(22px, 2.6vw, 30px);
+            font-weight: 400;
+            margin: 0 0 6px;
+        }
+
+        .footer-cta h3 span {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .footer-cta p {
+            margin: 0;
+            font-size: 14px;
+            color: rgba(244, 239, 232, .75);
+        }
+
+        .footer-logo {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 64px;
+            width: auto;
+            max-width: 100%;
+            display: block;
+        }
+
+        .footer-about {
+            font-size: 14px;
+            line-height: 1.75;
+            color: rgba(244, 239, 232, .8);
+            max-width: 360px;
+            margin-bottom: 24px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 14px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: var(--text);
+            font-size: 15px;
+            transition: .25s;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: #1a1209;
+            transform: translateY(-3px);
+        }
+
+        .footer-title {
+            position: relative;
+            color: var(--gold);
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 22px;
+            padding-bottom: 12px;
+        }
+
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 32px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(244, 239, 232, .8);
+            font-size: 14px;
+            transition: color .2s, padding .2s;
+        }
+
+        .footer-links a::before {
+            content: "\f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--gold);
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: rgba(244, 239, 232, .85);
+        }
+
+        .footer-contact .ic {
+            flex: 0 0 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(233, 168, 79, .12);
+            color: var(--gold);
+            display: grid;
+            place-items: center;
+            font-size: 14px;
+        }
+
+        .footer-contact small {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: rgba(244, 239, 232, .5);
+            margin-bottom: 1px;
+        }
+
+        .footer-contact a {
+            color: inherit;
+            word-break: break-word;
+        }
+
+        .footer-contact a:hover {
+            color: var(--gold);
+        }
+
+        .footer-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+            color: #1a1209;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 13px 28px;
+            border-radius: 30px;
+            transition: .25s;
+            white-space: nowrap;
+        }
+
+        .footer-btn:hover {
+            color: #1a1209;
+            filter: brightness(1.08);
+            transform: translateY(-2px);
+        }
+
+        .footer-btn i {
+            transition: transform .25s;
+        }
+
+        .footer-btn:hover i {
+            transform: translateX(4px);
+        }
+
+        .footer-bottom {
+            margin-top: 50px;
+            padding: 22px 0;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 13px;
+            color: rgba(244, 239, 232, .7);
+        }
+
+        .footer-legal {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-legal a {
+            color: rgba(244, 239, 232, .8);
+            padding: 0 14px;
+        }
+
+        .footer-legal a:first-child {
+            border-right: 1px solid rgba(255, 255, 255, .25);
+        }
+
+        .footer-legal a:last-child {
+            padding-right: 0;
+        }
+
+        .footer-legal a:hover {
+            color: var(--gold);
+        }
+
+        .footer-wrap {
+            padding-top: 70px;
+        }
+
+        @media (max-width: 767.98px) {
+            .footer-wrap {
+                padding-top: 50px;
+            }
+
+            .footer-cta {
+                padding: 28px 22px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .footer-cta .footer-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 36px;
+            }
+
+            .footer-about {
+                max-width: 100%;
+            }
+
+            .footer-contact+.footer-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <!-- =========================================================
+     9) FOOTER TAG  (same as other pages)
+========================================================= -->
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+
+            <!-- CTA band -->
+            <div class="footer-cta">
+                <div>
+                    <h3>Ready to create your <span>dream space?</span></h3>
+                    <p>Tell us about your project and get a free design consultation.</p>
+                </div>
+                <a href="contact.html" class="footer-btn">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="row gy-5 footer-main">
+
+                <!-- brand -->
+                <div class="col-12 col-lg-4">
+                    <a href="index.html" class="footer-logo"><img src="./assets/logo.png" alt="Suntek Designs"></a>
+                    <p class="footer-about">
+                        With over 16 years of excellence, Suntek Designs—part of the Suntek Groups—is your
+                        trusted partner for high-end interior design solutions across residential,
+                        commercial, and retail spaces.
+                    </p>
+
+                    <ul class="footer-social">
+                        <li><a href="https://www.facebook.com/people/Suntek-Designs/61558939678426/" target="_blank"
+                                rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/suntekdesigns/" target="_blank" rel="noopener"
+                                aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://sg.linkedin.com/company/abdel-designs" target="_blank" rel="noopener"
+                                aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="https://in.pinterest.com/suntekdesigns/" target="_blank" rel="noopener"
+                                aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@suntekdesigns" target="_blank" rel="noopener"
+                                aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- quick links -->
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Carpentry Workshop</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- services -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Residential Interiors</a></li>
+                        <li><a href="#">Commercial Interiors</a></li>
+                        <li><a href="#">Office Interiors</a></li>
+                        <li><a href="#">Turnkey Projects</a></li>
+                        <li><a href="#">Design Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- contact -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><span class="ic"><i class="fa-solid fa-location-dot"></i></span>
+                            <span><small>VISIT US</small>160 Changi Rd, #04-04 HexaCube, Singapore 419728</span>
+                        </li>
+                        <li><span class="ic"><i class="fa-solid fa-phone"></i></span>
+                            <span><small>CALL US</small><a href="tel:+6584637889">+65 8463 7889</a></span>
+                        </li>
+                        <li><span class="ic"><i class="fa-solid fa-envelope"></i></span>
+                            <span><small>EMAIL US</small><a
+                                    href="mailto:suntekdesigns@gmail.com">suntekdesigns@gmail.com</a></span>
+                        </li>
+                        <li><span class="ic"><i class="fa-solid fa-clock"></i></span>
+                            <span><small>WORKING HOURS</small>Mon - Sat, 10:00 AM - 7:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- bottom bar -->
+            <div class="footer-bottom">
+                <span>Copyright &copy; <span id="footerYear">2025</span> Suntek Designs Pte. Ltd | All Rights
+                    Reserved.</span>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('footerYear').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Scripts (same as other pages) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            var header = document.querySelector('.site-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.toggle('is-scrolled', window.scrollY > 40);
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
+    <script>
+        $(function () {
+            // close mobile menu after tapping a normal link (not the Services toggle)
+            $('#mainNav .nav-link:not(.dropdown-toggle), #mainNav .dropdown-item').on('click', function () {
+                if ($(window).width() < 992) $('#mainNav').collapse('hide');
+            });
+        });
+    </script>
+</body>
+
+</html>

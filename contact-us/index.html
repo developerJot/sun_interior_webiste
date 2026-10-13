@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us | Suntek Designs</title>
+    <meta name="description"
+        content="Get in touch with Suntek Designs Singapore for expert interior design and renovation services. We're here to bring your vision to life - contact us today!">
+
+    <!-- Bootstrap 5 + Font -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- =========================================================
+     1) HEADER STYLE  (same as index.html / team.html)
+========================================================= -->
+    <style>
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        :root {
+            --gold: #e9a84f;
+            --gold-soft: #f3c982;
+            --ink: #000b0f;
+            --text: #f4efe8;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--ink);
+            color: var(--text);
+            margin: 0;
+        }
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1030;
+            padding: 18px 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, .75), transparent);
+            transition: padding .3s ease, background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
+        }
+
+        .site-header.is-scrolled {
+            padding: 10px 0;
+            background: rgba(9, 7, 5, .92);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .45);
+            border-bottom: 1px solid rgba(233, 168, 79, .18);
+        }
+
+        .site-header .navbar {
+            padding: 0;
+        }
+
+        .brand {
+            text-decoration: none;
+            line-height: 1;
+            display: inline-block;
+        }
+
+        .brand-main {
+            display: block;
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--text);
+        }
+
+        .brand-main b {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .brand-sub {
+            display: block;
+            font-size: 9px;
+            letter-spacing: 6px;
+            color: var(--gold);
+            text-align: center;
+            margin-top: 3px;
+        }
+
+        .site-header .nav-link {
+            color: var(--text);
+            font-size: 15px;
+            padding: 8px 4px;
+            margin: 0 14px;
+            border-bottom: 2px solid transparent;
+            transition: color .2s;
+        }
+
+        .site-header .nav-link:hover,
+        .site-header .nav-link.active {
+            color: var(--gold);
+        }
+
+        .site-header .nav-link.active {
+            border-bottom-color: var(--gold);
+        }
+
+        .site-header .dropdown-menu {
+            background: rgba(18, 14, 10, .97);
+            border: 1px solid rgba(233, 168, 79, .3);
+            border-radius: 10px;
+            padding: 8px;
+            min-width: 220px;
+            margin-top: -7px;
+        }
+
+        .site-header .dropdown-item {
+            color: var(--text);
+            font-size: 14px;
+            padding: 9px 14px;
+            border-radius: 6px;
+        }
+
+        .site-header .dropdown-item:hover {
+            background: rgba(233, 168, 79, .15);
+            color: var(--gold);
+        }
+
+        .btn-quote {
+            color: var(--text);
+            border: 1px solid var(--gold);
+            border-radius: 30px;
+            padding: 9px 24px;
+            font-size: 15px;
+            background: transparent;
+            transition: .25s;
+        }
+
+        .btn-quote:hover {
+            background: var(--gold);
+            color: #1a1209;
+        }
+
+        .navbar-toggler {
+            border: 1px solid var(--gold);
+            padding: 6px 10px;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        @media (min-width:992px) {
+            .site-header .dropdown:hover>.dropdown-menu {
+                display: block;
+            }
+        }
+
+        @media (max-width:991.98px) {
+            .site-header {
+                background: rgba(0, 0, 0, .85);
+                padding: 12px 0;
+            }
+
+            .site-header.is-scrolled {
+                padding: 10px 0;
+                background: rgba(9, 7, 5, .95);
+            }
+
+            .site-header .navbar-collapse {
+                background: rgba(14, 11, 8, .98);
+                margin-top: 14px;
+                padding: 10px 18px 20px;
+                border: 1px solid rgba(233, 168, 79, .25);
+                border-radius: 12px;
+                max-height: calc(100vh - 90px);
+                overflow-y: auto;
+            }
+
+            .site-header .nav-link {
+                margin: 0;
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, .08);
+            }
+
+            .site-header .nav-link.active {
+                border-bottom-color: rgba(255, 255, 255, .08);
+            }
+
+            .site-header .dropdown-menu {
+                background: transparent;
+                border: 0;
+                padding: 0 0 0 12px;
+                margin: 0;
+            }
+
+            .btn-quote {
+                display: block;
+                text-align: center;
+                margin-top: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+     2) HEADER TAG  (same as index.html / team.html)
+========================================================= -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+
+                <a class="brand" href="index.html">
+                    <span class="brand-main">SUN<b>TEK</b></span>
+                    <span class="brand-sub">DESIGNS</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="index.html">About Us</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="../team/">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../testimonials/">Testimonials</a></li>
+
+                        <!-- Services dropdown -->
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDrop" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDrop">
+                                <li><a class="dropdown-item" href="#">Residential Interiors</a></li>
+                                <li><a class="dropdown-item" href="#">Office Interiors</a></li>
+                                <li><a class="dropdown-item" href="#">Commercial Spaces</a></li>
+                                <li><a class="dropdown-item" href="#">Modular Kitchens</a></li>
+                                <li><a class="dropdown-item" href="#">Fit-out Solutions</a></li>
+                            </ul>
+                        </li> -->
+
+                        <li class="nav-item"><a class="nav-link" href="../project-portfolio/">Portfolio</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
+                        <li class="nav-item"><a class="nav-link active" href="../contact-us/">Contact Us</a></li>
+                    </ul>
+
+                    <a href="../contact-us/" class="btn-quote">Get a Quote &rarr;</a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- =========================================================
+     3) CONTACT BANNER - STYLE
+========================================================= -->
+    <style>
+        .contact-banner {
+            position: relative;
+            padding: 170px 0 80px;
+            background: var(--ink);
+            overflow: hidden;
+            border-bottom: 1px solid rgba(233, 168, 79, .15);
+        }
+
+        .contact-banner-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .28;
+        }
+
+        .contact-banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 11, 15, .55), var(--ink) 98%);
+        }
+
+        .contact-banner .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-crumbs {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            margin: 0 0 18px;
+            padding: 0;
+            font-size: 14px;
+            color: rgba(244, 239, 232, .6);
+        }
+
+        .contact-crumbs a {
+            color: rgba(244, 239, 232, .8);
+            transition: color .2s;
+        }
+
+        .contact-crumbs a:hover {
+            color: var(--gold);
+        }
+
+        .contact-crumbs li+li::before {
+            content: "\f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--gold);
+            margin-right: 10px;
+            font-size: 12px;
+        }
+
+        .contact-banner h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            font-weight: 400;
+            line-height: 1.08;
+            margin: 0 0 16px;
+        }
+
+        .contact-banner h1 span {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .contact-banner p {
+            max-width: 520px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(244, 239, 232, .8);
+            margin: 0;
+        }
+
+        @media (max-width: 767.98px) {
+            .contact-banner {
+                padding: 130px 0 60px;
+            }
+        }
+    </style>
+
+    <!-- =========================================================
+     4) CONTACT BANNER - SECTION TAG
+========================================================= -->
+    <section class="contact-banner">
+        <img class="contact-banner-bg"
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=60&w=1600&h=700"
+            alt="">
+        <div class="container">
+            <ul class="contact-crumbs">
+                <li><a href="index.html">Home</a></li>
+                <li>Contact Us</li>
+            </ul>
+            <h1>Let's plan your <span>next space.</span></h1>
+            <p>Get in touch with Suntek Designs Singapore for expert interior design and renovation services. We're here
+                to bring your vision to life.</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- =========================================================
+     5) ENQUIRY FORM - STYLE
+========================================================= -->
+    <style>
+        .enquiry {
+            padding: 90px 0;
+            background: var(--ink);
+        }
+
+        .enquiry-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* ---------- left side ---------- */
+        .enquiry-eyebrow {
+            color: var(--gold);
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0 0 12px;
+        }
+
+        .enquiry-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 400;
+            line-height: 1.15;
+            margin: 0 0 20px;
+        }
+
+        .enquiry-img {
+            position: relative;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(233, 168, 79, .35);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .55);
+            aspect-ratio: 4 / 3.4;
+            margin-bottom: 26px;
+        }
+
+        .enquiry-img img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .enquiry-quick {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .enquiry-quick li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+            font-size: 15px;
+            color: rgba(244, 239, 232, .85);
+        }
+
+        .enquiry-quick .ic {
+            flex: 0 0 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            display: grid;
+            place-items: center;
+            font-size: 14px;
+        }
+
+        .enquiry-quick a {
+            color: inherit;
+            transition: color .2s;
+        }
+
+        .enquiry-quick a:hover {
+            color: var(--gold);
+        }
+
+        /* ---------- form card ---------- */
+        .enquiry-card {
+            padding: 40px 38px;
+            border: 1px solid rgba(233, 168, 79, .3);
+            border-radius: 22px;
+            background: linear-gradient(135deg, rgba(233, 168, 79, .1), rgba(233, 168, 79, .02));
+            background-color: #120d08;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .5);
+        }
+
+        .enquiry-card h3 {
+            font-size: 26px;
+            font-weight: 500;
+            margin: 0 0 6px;
+        }
+
+        .enquiry-card .enquiry-sub {
+            font-size: 14px;
+            color: rgba(244, 239, 232, .65);
+            margin: 0 0 8px;
+        }
+
+        .form-group-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--gold);
+            margin: 30px 0 18px;
+        }
+
+        .form-group-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: rgba(233, 168, 79, .3);
+        }
+
+        .enquiry-card label {
+            display: block;
+            font-size: 13px;
+            color: rgba(244, 239, 232, .75);
+            margin-bottom: 6px;
+        }
+
+        .enquiry-card label em {
+            color: var(--gold);
+            font-style: normal;
+        }
+
+        .enquiry-card .form-control,
+        .enquiry-card .form-select {
+            background-color: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(233, 168, 79, .35);
+            border-radius: 12px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 14px;
+            padding: 12px 16px;
+            transition: border-color .25s, box-shadow .25s;
+        }
+
+        .enquiry-card .form-select {
+            --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23e9a84f' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+        }
+
+        .enquiry-card .form-select option {
+            background: #120d08;
+            color: var(--text);
+        }
+
+        .enquiry-card .form-control::placeholder {
+            color: rgba(244, 239, 232, .4);
+        }
+
+        .enquiry-card .form-control:focus,
+        .enquiry-card .form-select:focus {
+            background-color: rgba(255, 255, 255, .06);
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(233, 168, 79, .18);
+            color: var(--text);
+        }
+
+        .enquiry-card textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-save {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 6px 0 24px;
+            font-size: 13px;
+            color: rgba(244, 239, 232, .65);
+        }
+
+        .form-save input {
+            margin-top: 3px;
+            accent-color: var(--gold);
+        }
+
+        .form-save label {
+            margin: 0;
+        }
+
+        .btn-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+            color: #1a1209;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 500;
+            border: 0;
+            border-radius: 40px;
+            padding: 14px 34px;
+            cursor: pointer;
+            transition: .25s;
+        }
+
+        .btn-submit i {
+            transition: transform .25s;
+        }
+
+        .btn-submit:hover {
+            filter: brightness(1.08);
+            transform: translateY(-2px);
+        }
+
+        .btn-submit:hover i {
+            transform: translateX(5px);
+        }
+
+        .btn-submit:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 991.98px) {
+            .enquiry {
+                padding: 70px 0;
+            }
+
+            .enquiry-grid {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .enquiry {
+                padding: 60px 0;
+            }
+
+            .enquiry-card {
+                padding: 28px 20px;
+            }
+
+            .btn-submit {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <!-- =========================================================
+     6) ENQUIRY FORM - SECTION TAG
+========================================================= -->
+    <section class="enquiry" id="enquiry">
+        <div class="container">
+            <div class="enquiry-grid">
+
+                <!-- LEFT: intro + image + quick contacts -->
+                <div class="enquiry-left">
+                    <p class="enquiry-eyebrow">Contact Us</p>
+                    <h2 class="enquiry-title">Submit Enquiry for Renovation Quotations</h2>
+
+                    <div class="enquiry-img">
+                        <img src="https://suntekdesigns.com/wp-content/uploads/revslider/slider-demo-01/demo1-slide-02-1024x490.jpg"
+                            alt="Suntek Designs interior project">
+                    </div>
+
+                    <ul class="enquiry-quick">
+                        <li><span class="ic"><i class="fa-solid fa-phone"></i></span>
+                            <a href="tel:+6584637889">+65 8463 7889</a>
+                        </li>
+                        <li><span class="ic"><i class="fa-solid fa-envelope"></i></span>
+                            <a href="mailto:suntekdesigns@gmail.com">suntekdesigns@gmail.com</a>
+                        </li>
+                        <li><span class="ic"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>160 Changi Rd, #04-04 HexaCube, Singapore 419728</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- RIGHT: form -->
+                <div class="enquiry-card">
+                    <h3>Send a Message</h3>
+                    <p class="enquiry-sub">Tell us about your property and we will get back to you with a quotation.</p>
+
+                    <form action="#" method="post">
+
+                        <h4 class="form-group-title">My Property &amp; Project Info</h4>
+
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label for="propertyType">My Property Type is</label>
+                                <select class="form-select" id="propertyType" name="property_type">
+                                    <option value="">Select property type</option>
+                                    <option>HDB</option>
+                                    <option>Apartment/Condominium</option>
+                                    <option>Landed Property</option>
+                                    <option>Commercial</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="roomType">The room type is <em>*</em></label>
+                                <select class="form-select" id="roomType" name="room_type" required>
+                                    <option value="">Select room type</option>
+                                    <option>Studio</option>
+                                    <option>2 Rooms</option>
+                                    <option>3 Rooms</option>
+                                    <option>4 Rooms</option>
+                                    <option>5 Rooms</option>
+                                    <option>Above 5 Rooms</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="propertyStatus">Property Status</label>
+                                <select class="form-select" id="propertyStatus" name="property_status">
+                                    <option value="">Select status</option>
+                                    <option>New</option>
+                                    <option>Resale</option>
+                                    <option>Presently Staying</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="keyCollection">Key Collection Time</label>
+                                <select class="form-select" id="keyCollection" name="key_collection">
+                                    <option value="">Select key collection time</option>
+                                    <option>Yes, Key is collected</option>
+                                    <option>No, in 1 - 3 months time</option>
+                                    <option>No, in 3 - 6 months time</option>
+                                    <option>No, in 7 - 12 months time</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="budget">My renovation budget is</label>
+                                <select class="form-select" id="budget" name="budget">
+                                    <option value="">Select budget</option>
+                                    <option>Not Fixed</option>
+                                    <option>20,000 and Below</option>
+                                    <option>20,001 - 30,000</option>
+                                    <option>30,001 - 40,000</option>
+                                    <option>40,001 - 60,000</option>
+                                    <option>60,001 - 80,000</option>
+                                    <option>80,001 - 100,000</option>
+                                    <option>100,001 - 200,000</option>
+                                    <option>200,001 &amp; Above</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h4 class="form-group-title">My Contact Details</h4>
+
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label for="fullName">Your Name <em>*</em></label>
+                                <input type="text" class="form-control" id="fullName" name="name"
+                                    placeholder="Full name" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="phone">Phone Number <em>*</em></label>
+                                <input type="tel" class="form-control" id="phone" name="phone"
+                                    placeholder="+65 0000 0000" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="email">Email Address <em>*</em></label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="you@example.com" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="message">Your Message</label>
+                                <textarea class="form-control" id="message" name="message"
+                                    placeholder="Tell us a little about your project"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- <div class="form-save">
+                            <input type="checkbox" id="saveInfo" name="save_info">
+                            <label for="saveInfo">Save my name, email, and website in this browser for the next time I
+                                comment.</label>
+                        </div> -->
+
+                        <button type="submit" class="btn-submit mt-3">Submit Now <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- =========================================================
+     7) LOCATIONS (MAPS) - STYLE
+========================================================= -->
+    <style>
+        .locations {
+            padding: 40px 0 90px;
+            background: var(--ink);
+        }
+
+        .locations-head {
+            max-width: 620px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .locations-eyebrow {
+            color: var(--gold);
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0 0 12px;
+        }
+
+        .locations-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 400;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 26px;
+        }
+
+        .location-card {
+            border: 1px solid rgba(233, 168, 79, .3);
+            border-radius: 20px;
+            overflow: hidden;
+            background: #120d08;
+            transition: transform .3s, border-color .3s, box-shadow .3s;
+        }
+
+        .location-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: 0 18px 40px rgba(233, 168, 79, .15);
+        }
+
+        .location-map {
+            display: block;
+            width: 100%;
+            height: 280px;
+            border: 0;
+            filter: grayscale(.5) invert(.9) contrast(.9) hue-rotate(180deg);
+        }
+
+        .location-body {
+            padding: 26px 26px 12px;
+        }
+
+        .location-body h3 {
+            position: relative;
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--gold);
+            margin: 0 0 22px;
+            padding-bottom: 12px;
+        }
+
+        .location-body h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 32px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .location-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .location-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 18px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(244, 239, 232, .85);
+        }
+
+        .location-list .ic {
+            flex: 0 0 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(233, 168, 79, .12);
+            color: var(--gold);
+            display: grid;
+            place-items: center;
+            font-size: 14px;
+        }
+
+        .location-list small {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(244, 239, 232, .5);
+            margin-bottom: 2px;
+        }
+
+        .location-list a {
+            color: inherit;
+            word-break: break-word;
+            transition: color .2s;
+        }
+
+        .location-list a:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 991.98px) {
+            .locations {
+                padding: 20px 0 70px;
+            }
+
+            .locations-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .locations {
+                padding: 10px 0 60px;
+            }
+
+            .location-map {
+                height: 230px;
+            }
+
+            .location-body {
+                padding: 22px 20px 8px;
+            }
+
+            .location-card:hover {
+                transform: none;
+            }
+        }
+    </style>
+
+    <!-- =========================================================
+     8) LOCATIONS (MAPS) - SECTION TAG
+========================================================= -->
+    <section class="locations" id="locations">
+        <div class="container">
+
+            <div class="locations-head">
+                <p class="locations-eyebrow">Visit Us</p>
+                <h2 class="locations-title">Our Showroom &amp; Workshop</h2>
+            </div>
+
+            <div class="locations-grid">
+
+                <!-- showroom -->
+                <article class="location-card">
+                    <iframe class="location-map" title="Suntek Designs showroom map" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://maps.google.com/maps?q=160%20Changi%20Rd%2C%20%2304-04%20HexaCube%2C%20Singapore%20419728&t=m&z=15&output=embed&iwloc=near"></iframe>
+                    <div class="location-body">
+                        <h3>Showroom Address</h3>
+                        <ul class="location-list">
+                            <li><span class="ic"><i class="fa-solid fa-location-dot"></i></span>
+                                <span><small>Our Address</small>160 Changi Rd, #04-04 HexaCube, Singapore
+                                    419728</span>
+                            </li>
+                            <li><span class="ic"><i class="fa-solid fa-envelope"></i></span>
+                                <span><small>Our Mailbox</small><a
+                                        href="mailto:suntekdesigns@gmail.com">suntekdesigns@gmail.com</a></span>
+                            </li>
+                            <li><span class="ic"><i class="fa-solid fa-phone"></i></span>
+                                <span><small>Our Phone</small><a href="tel:+6584637889">+65 8463 7889</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- carpentry workshop -->
+                <article class="location-card">
+                    <iframe class="location-map" title="Suntek Designs carpentry workshop map" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://maps.google.com/maps?q=1%20Tampines%20North%20Dr.%201%20%2303-18%20%2C%20Singapore%20528559&t=m&z=15&output=embed&iwloc=near"></iframe>
+                    <div class="location-body">
+                        <h3>Carpentry Workshop Address</h3>
+                        <ul class="location-list">
+                            <li><span class="ic"><i class="fa-solid fa-location-dot"></i></span>
+                                <span><small>Our Address</small>1 Tampines North Dr. 1 #03-18, Singapore
+                                    528559</span>
+                            </li>
+                            <li><span class="ic"><i class="fa-solid fa-envelope"></i></span>
+                                <span><small>Our Mailbox</small><a
+                                        href="mailto:suntekdesigns@gmail.com">suntekdesigns@gmail.com</a></span>
+                            </li>
+                            <li><span class="ic"><i class="fa-solid fa-phone"></i></span>
+                                <span><small>Our Phone</small><a href="tel:+6584637889">+65 8463 7889</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <style>
+        .strip {
+            padding: 0 0 90px;
+            background: var(--ink);
+        }
+
+        .strip-grid {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .strip-item {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: #17120d;
+            transition: border-color .3s, box-shadow .3s;
+        }
+
+        .strip-item img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .6s;
+        }
+
+        .strip-item:hover {
+            border-color: var(--gold);
+            box-shadow: 0 14px 30px rgba(233, 168, 79, .18);
+        }
+
+        .strip-item:hover img {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 991.98px) {
+            .strip {
+                padding-bottom: 70px;
+            }
+
+            .strip-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .strip {
+                padding-bottom: 60px;
+            }
+
+            .strip-grid {
+                gap: 10px;
+            }
+        }
+    </style>
+
+   
+    <section class="strip">
+        <div class="container">
+            <div class="strip-grid">
+                <div class="strip-item"><img
+                        src="https://suntekdesigns.com/wp-content/uploads/2024/05/Kew4-1024x691.jpg"
+                        alt="Suntek Designs project - Kew" loading="lazy"></div>
+                <div class="strip-item"><img
+                        src="https://suntekdesigns.com/wp-content/uploads/2024/05/meyer3-1024x691.jpg"
+                        alt="Suntek Designs project - Meyer" loading="lazy"></div>
+                <div class="strip-item"><img
+                        src="https://suntekdesigns.com/wp-content/uploads/2024/05/meyer5-1024x691.jpg"
+                        alt="Suntek Designs project - Meyer" loading="lazy"></div>
+                <div class="strip-item"><img
+                        src="https://suntekdesigns.com/wp-content/uploads/2024/05/meyer6-1024x691.jpg"
+                        alt="Suntek Designs project - Meyer" loading="lazy"></div>
+                <div class="strip-item"><img
+                        src="https://suntekdesigns.com/wp-content/uploads/2024/05/meyer7-1024x691.jpg"
+                        alt="Suntek Designs project - Meyer" loading="lazy"></div>
+                <div class="strip-item"><img
+                        src="https://suntekdesigns.com/wp-content/uploads/2024/05/Bishan8-1024x691.jpg"
+                        alt="Suntek Designs project - Bishan" loading="lazy"></div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+
+
+
+
+
+    <!-- =========================================================
+     FLOATING BUTTONS - STYLE
+========================================================= -->
+    <style>
+        .wa-float,
+        .to-top {
+            position: fixed;
+            right: 22px;
+            z-index: 1040;
+            /* above the header (1030) */
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            text-decoration: none;
+        }
+
+        /* WhatsApp: always visible, bottom-most */
+        .wa-float {
+            bottom: 22px;
+            background: #25d366;
+            color: #fff;
+            font-size: 28px;
+            box-shadow: 0 8px 22px rgba(37, 211, 102, .45);
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .wa-float:hover {
+            color: #fff;
+            transform: translateY(-3px) scale(1.06);
+            box-shadow: 0 12px 28px rgba(37, 211, 102, .6);
+        }
+
+        /* soft pulse ring */
+        .wa-float::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 2px solid #25d366;
+            animation: waPulse 2s ease-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes waPulse {
+            from {
+                transform: scale(1);
+                opacity: .7;
+            }
+
+            to {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+        }
+
+        /* Scroll to top: sits above WhatsApp, hidden until user scrolls */
+        .to-top {
+            bottom: 90px;
+            /* 22px + 54px button + 14px gap */
+            border: 1px solid var(--gold);
+            background: rgba(9, 7, 5, .92);
+            color: var(--gold);
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, .5);
+
+            /* hidden state */
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(14px);
+            transition: opacity .3s, visibility .3s, transform .3s, background .25s, color .25s;
+        }
+
+        .to-top.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+
+        .to-top:hover {
+            background: var(--gold);
+            color: #1a1209;
+        }
+
+        .to-top:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 575.98px) {
+
+            .wa-float,
+            .to-top {
+                right: 14px;
+                width: 48px;
+                height: 48px;
+            }
+
+            .wa-float {
+                bottom: 14px;
+                font-size: 25px;
+            }
+
+            .to-top {
+                bottom: 74px;
+                font-size: 16px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .wa-float::before {
+                animation: none;
+            }
+        }
+    </style>
+
+    <!-- =========================================================
+     FLOATING BUTTONS - HTML
+========================================================= -->
+    <a href="https://wa.me/6584637889?text=Hi%20Suntek%20Designs%2C%20I%20would%20like%20to%20know%20more%20about%20your%20interior%20design%20services."
+        class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <button type="button" class="to-top" id="toTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- =========================================================
+       FLOATING BUTTONS - SCRIPT
+  ========================================================= -->
+    <script>
+        (function () {
+            var toTop = document.getElementById('toTop');
+            if (!toTop) return;
+
+            // show only after the user has scrolled down 400px
+            function onScroll() {
+                toTop.classList.toggle('is-visible', window.scrollY > 400);
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            toTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- =========================================================
+     11) FOOTER STYLE  (same as index.html / team.html)
+========================================================= -->
+    <style>
+        .site-footer {
+            position: relative;
+            background: #090705;
+            border-top: 1px solid rgba(233, 168, 79, .15);
+            overflow: hidden;
+        }
+
+        .site-footer::before {
+            content: "";
+            position: absolute;
+            left: -180px;
+            top: 40px;
+            width: 520px;
+            height: 520px;
+            background: radial-gradient(circle, rgba(233, 168, 79, .13), transparent 68%);
+            pointer-events: none;
+        }
+
+        .site-footer>.container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-cta {
+            padding: 36px 40px;
+            border: 1px solid rgba(233, 168, 79, .3);
+            border-radius: 18px;
+            background: linear-gradient(120deg, rgba(233, 168, 79, .16), rgba(233, 168, 79, .03));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+            background-color: #120d08;
+        }
+
+        .footer-cta h3 {
+            font-size: clamp(22px, 2.6vw, 30px);
+            font-weight: 400;
+            margin: 0 0 6px;
+        }
+
+        .footer-cta h3 span {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .footer-cta p {
+            margin: 0;
+            font-size: 14px;
+            color: rgba(244, 239, 232, .75);
+        }
+
+        .footer-logo {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 64px;
+            width: auto;
+            max-width: 100%;
+            display: block;
+        }
+
+        .footer-about {
+            font-size: 14px;
+            line-height: 1.75;
+            color: rgba(244, 239, 232, .8);
+            max-width: 360px;
+            margin-bottom: 24px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 14px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: var(--text);
+            font-size: 15px;
+            transition: .25s;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: #1a1209;
+            transform: translateY(-3px);
+        }
+
+        .footer-title {
+            position: relative;
+            color: var(--gold);
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 22px;
+            padding-bottom: 12px;
+        }
+
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 32px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(244, 239, 232, .8);
+            font-size: 14px;
+            transition: color .2s, padding .2s;
+        }
+
+        .footer-links a::before {
+            content: "\f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--gold);
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: rgba(244, 239, 232, .85);
+        }
+
+        .footer-contact .ic {
+            flex: 0 0 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(233, 168, 79, .12);
+            color: var(--gold);
+            display: grid;
+            place-items: center;
+            font-size: 14px;
+        }
+
+        .footer-contact small {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: rgba(244, 239, 232, .5);
+            margin-bottom: 1px;
+        }
+
+        .footer-contact a {
+            color: inherit;
+            word-break: break-word;
+        }
+
+        .footer-contact a:hover {
+            color: var(--gold);
+        }
+
+        .footer-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+            color: #1a1209;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 13px 28px;
+            border-radius: 30px;
+            transition: .25s;
+            white-space: nowrap;
+        }
+
+        .footer-btn:hover {
+            color: #1a1209;
+            filter: brightness(1.08);
+            transform: translateY(-2px);
+        }
+
+        .footer-btn i {
+            transition: transform .25s;
+        }
+
+        .footer-btn:hover i {
+            transform: translateX(4px);
+        }
+
+        .footer-bottom {
+            margin-top: 50px;
+            padding: 22px 0;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 13px;
+            color: rgba(244, 239, 232, .7);
+        }
+
+        .footer-legal {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-legal a {
+            color: rgba(244, 239, 232, .8);
+            padding: 0 14px;
+        }
+
+        .footer-legal a:first-child {
+            border-right: 1px solid rgba(255, 255, 255, .25);
+        }
+
+        .footer-legal a:last-child {
+            padding-right: 0;
+        }
+
+        .footer-legal a:hover {
+            color: var(--gold);
+        }
+
+        .footer-wrap {
+            padding-top: 70px;
+        }
+
+        @media (max-width: 767.98px) {
+            .footer-wrap {
+                padding-top: 50px;
+            }
+
+            .footer-cta {
+                padding: 28px 22px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .footer-cta .footer-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 36px;
+            }
+
+            .footer-about {
+                max-width: 100%;
+            }
+
+            .footer-contact+.footer-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <!-- =========================================================
+     12) FOOTER TAG  (same as index.html / team.html)
+========================================================= -->
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+
+            <!-- CTA band -->
+            <div class="footer-cta">
+                <div>
+                    <h3>Ready to create your <span>dream space?</span></h3>
+                    <p>Tell us about your project and get a free design consultation.</p>
+                </div>
+                <a href="#enquiry" class="footer-btn">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="row gy-5 footer-main">
+
+                <!-- brand -->
+                <div class="col-12 col-lg-4">
+                    <a href="index.html" class="footer-logo"><img src="./assets/logo.png" alt="Suntek Designs"></a>
+                    <p class="footer-about">
+                        With over 16 years of excellence, Suntek Designs—part of the Suntek Groups—is your
+                        trusted partner for high-end interior design solutions across residential,
+                        commercial, and retail spaces.
+                    </p>
+
+                    <ul class="footer-social">
+                        <li><a href="https://www.facebook.com/people/Suntek-Designs/61558939678426/" target="_blank"
+                                rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/suntekdesigns/" target="_blank" rel="noopener"
+                                aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://sg.linkedin.com/company/abdel-designs" target="_blank" rel="noopener"
+                                aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="https://in.pinterest.com/suntekdesigns/" target="_blank" rel="noopener"
+                                aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@suntekdesigns" target="_blank" rel="noopener"
+                                aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- quick links -->
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Carpentry Workshop</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- services -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Residential Interiors</a></li>
+                        <li><a href="#">Commercial Interiors</a></li>
+                        <li><a href="#">Office Interiors</a></li>
+                        <li><a href="#">Turnkey Projects</a></li>
+                        <li><a href="#">Design Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- contact -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><span class="ic"><i class="fa-solid fa-location-dot"></i></span>
+                            <span><small>VISIT US</small>160 Changi Rd, #04-04 HexaCube, Singapore 419728</span>
+                        </li>
+                        <li><span class="ic"><i class="fa-solid fa-phone"></i></span>
+                            <span><small>CALL US</small><a href="tel:+6584637889">+65 8463 7889</a></span>
+                        </li>
+                        <li><span class="ic"><i class="fa-solid fa-envelope"></i></span>
+                            <span><small>EMAIL US</small><a
+                                    href="mailto:suntekdesigns@gmail.com">suntekdesigns@gmail.com</a></span>
+                        </li>
+                        <li><span class="ic"><i class="fa-solid fa-clock"></i></span>
+                            <span><small>WORKING HOURS</small>Mon - Sat, 10:00 AM - 7:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- bottom bar -->
+            <div class="footer-bottom">
+                <span>Copyright &copy; <span id="footerYear">2025</span> Suntek Designs Pte. Ltd | All Rights
+                    Reserved.</span>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('footerYear').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Scripts (same as index.html / team.html) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            var header = document.querySelector('.site-header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.toggle('is-scrolled', window.scrollY > 40);
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
+    <script>
+        $(function () {
+            // close mobile menu after tapping a normal link (not the Services toggle)
+            $('#mainNav .nav-link:not(.dropdown-toggle), #mainNav .dropdown-item').on('click', function () {
+                if ($(window).width() < 992) $('#mainNav').collapse('hide');
+            });
+        });
+    </script>
+</body>
+
+</html>
