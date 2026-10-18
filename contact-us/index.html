@@ -414,9 +414,7 @@
 
 
 
-    <!-- =========================================================
-     5) ENQUIRY FORM - STYLE
-========================================================= -->
+    <!-- form code -->
     <style>
         .enquiry {
             padding: 90px 0;
@@ -584,29 +582,6 @@
             color: var(--text);
         }
 
-        .enquiry-card textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .form-save {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin: 6px 0 24px;
-            font-size: 13px;
-            color: rgba(244, 239, 232, .65);
-        }
-
-        .form-save input {
-            margin-top: 3px;
-            accent-color: var(--gold);
-        }
-
-        .form-save label {
-            margin: 0;
-        }
-
         .btn-submit {
             display: inline-flex;
             align-items: center;
@@ -641,6 +616,174 @@
             outline-offset: 3px;
         }
 
+        .btn-submit:disabled {
+            opacity: .6;
+            cursor: not-allowed;
+            transform: none;
+            filter: none;
+        }
+
+        /* ---------- image upload ---------- */
+        .upload {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 18px;
+            border: 1.5px dashed rgba(233, 168, 79, .5);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .04);
+            cursor: pointer;
+            transition: border-color .25s, background .25s;
+        }
+
+        .upload:hover,
+        .upload.is-drag {
+            border-color: var(--gold);
+            background: rgba(233, 168, 79, .08);
+        }
+
+        .upload:focus-within {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(233, 168, 79, .18);
+        }
+
+        .upload input[type="file"] {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .upload-ic {
+            flex: 0 0 46px;
+            height: 46px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            color: var(--gold);
+            font-size: 18px;
+        }
+
+        .upload-text strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+
+        .upload-text small {
+            font-size: 12px;
+            color: rgba(244, 239, 232, .55);
+        }
+
+        .upload-preview {
+            display: none;
+            align-items: center;
+            gap: 14px;
+            margin-top: 12px;
+            padding: 10px;
+            border: 1px solid rgba(233, 168, 79, .3);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .04);
+        }
+
+        .upload-preview.is-on {
+            display: flex;
+        }
+
+        .upload-preview img {
+            flex: 0 0 56px;
+            width: 56px;
+            height: 56px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .upload-name {
+            flex: 1;
+            min-width: 0;
+            font-size: 13px;
+            color: var(--text);
+        }
+
+        .upload-name span {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .upload-name small {
+            display: block;
+            font-size: 12px;
+            color: rgba(244, 239, 232, .55);
+        }
+
+        .upload-remove {
+            flex: 0 0 34px;
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255, 255, 255, .25);
+            border-radius: 50%;
+            background: transparent;
+            color: var(--text);
+            font-size: 13px;
+            cursor: pointer;
+            transition: border-color .25s, color .25s;
+        }
+
+        .upload-remove:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .upload-error {
+            display: none;
+            margin: 8px 0 0;
+            font-size: 13px;
+            color: #ff9d9d;
+        }
+
+        .upload-error.is-on {
+            display: block;
+        }
+
+        /* ---------- form status message ---------- */
+        .form-status {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            margin-top: 18px;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .form-status.is-ok,
+        .form-status.is-err {
+            display: flex;
+        }
+
+        .form-status.is-ok {
+            background: rgba(60, 190, 120, .12);
+            border: 1px solid rgba(60, 190, 120, .5);
+            color: #8fe0b2;
+        }
+
+        .form-status.is-err {
+            background: rgba(230, 80, 80, .12);
+            border: 1px solid rgba(230, 80, 80, .5);
+            color: #ff9d9d;
+        }
+
         @media (max-width: 991.98px) {
             .enquiry {
                 padding: 70px 0;
@@ -665,12 +808,19 @@
                 width: 100%;
                 justify-content: center;
             }
+
+            .upload {
+                padding: 14px;
+                gap: 12px;
+            }
+
+            .upload-text strong {
+                font-size: 13px;
+            }
         }
     </style>
 
-    <!-- =========================================================
-     6) ENQUIRY FORM - SECTION TAG
-========================================================= -->
+    <!-- form code -->
     <section class="enquiry" id="enquiry">
         <div class="container">
             <div class="enquiry-grid">
@@ -703,7 +853,14 @@
                     <h3>Send a Message</h3>
                     <p class="enquiry-sub">Tell us about your property and we will get back to you with a quotation.</p>
 
-                    <form action="#" method="post">
+                    <form id="enquiryForm" action="https://formsubmit.co/ajax/developer.jot@gmail.com" method="POST"
+                        enctype="multipart/form-data">
+
+                        <!-- FormSubmit settings -->
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- spam trap: real visitors never see or fill this -->
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
                         <h4 class="form-group-title">My Property &amp; Project Info</h4>
 
@@ -716,19 +873,6 @@
                                     <option>Apartment/Condominium</option>
                                     <option>Landed Property</option>
                                     <option>Commercial</option>
-                                </select>
-                            </div>
-
-                            <div class="col-12 col-md-6">
-                                <label for="roomType">The room type is <em>*</em></label>
-                                <select class="form-select" id="roomType" name="room_type" required>
-                                    <option value="">Select room type</option>
-                                    <option>Studio</option>
-                                    <option>2 Rooms</option>
-                                    <option>3 Rooms</option>
-                                    <option>4 Rooms</option>
-                                    <option>5 Rooms</option>
-                                    <option>Above 5 Rooms</option>
                                 </select>
                             </div>
 
@@ -753,7 +897,7 @@
                                 </select>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-12 col-md-6">
                                 <label for="budget">My renovation budget is</label>
                                 <select class="form-select" id="budget" name="budget">
                                     <option value="">Select budget</option>
@@ -767,6 +911,31 @@
                                     <option>100,001 - 200,000</option>
                                     <option>200,001 &amp; Above</option>
                                 </select>
+                            </div>
+
+                            <!-- image upload -->
+                            <div class="col-12">
+                                <label for="photo">Upload a Photo (optional)</label>
+                                <div class="upload" id="uploadBox">
+                                    <input type="file" id="photo" name="attachment" accept="image/*">
+                                    <span class="upload-ic"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                                    <span class="upload-text">
+                                        <strong>Click to choose or drag a photo here</strong>
+                                        <small>JPG, PNG or WebP, up to 5 MB</small>
+                                    </span>
+                                </div>
+
+                                <div class="upload-preview" id="uploadPreview">
+                                    <img id="uploadThumb" alt="Selected photo preview">
+                                    <span class="upload-name">
+                                        <span id="uploadName"></span>
+                                        <small id="uploadSize"></small>
+                                    </span>
+                                    <button type="button" class="upload-remove" id="uploadRemove"
+                                        aria-label="Remove photo"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+
+                                <p class="upload-error" id="uploadError" role="alert"></p>
                             </div>
                         </div>
 
@@ -790,28 +959,135 @@
                                 <input type="email" class="form-control" id="email" name="email"
                                     placeholder="you@example.com" required>
                             </div>
-
-                            <div class="col-12">
-                                <label for="message">Your Message</label>
-                                <textarea class="form-control" id="message" name="message"
-                                    placeholder="Tell us a little about your project"></textarea>
-                            </div>
                         </div>
 
-                        <!-- <div class="form-save">
-                            <input type="checkbox" id="saveInfo" name="save_info">
-                            <label for="saveInfo">Save my name, email, and website in this browser for the next time I
-                                comment.</label>
-                        </div> -->
-
-                        <button type="submit" class="btn-submit mt-3">Submit Now <i
+                        <button type="submit" class="btn-submit mt-4">Submit Now <i
                                 class="fa-solid fa-arrow-right"></i></button>
+
+                        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
                     </form>
                 </div>
 
             </div>
         </div>
     </section>
+
+    <!-- form code -->
+    <script>
+        (function () {
+            var form = document.getElementById('enquiryForm');
+            if (!form) return;
+
+            var btn = form.querySelector('.btn-submit');
+            var status = document.getElementById('formStatus');
+            var btnHTML = btn.innerHTML;
+
+            // image upload elements
+            var photo = document.getElementById('photo');
+            var box = document.getElementById('uploadBox');
+            var preview = document.getElementById('uploadPreview');
+            var thumb = document.getElementById('uploadThumb');
+            var nameEl = document.getElementById('uploadName');
+            var sizeEl = document.getElementById('uploadSize');
+            var removeBtn = document.getElementById('uploadRemove');
+            var errEl = document.getElementById('uploadError');
+            var MAX_SIZE = 5 * 1024 * 1024; // 5 MB
+            var previewUrl = null;
+
+            function showUploadError(msg) {
+                errEl.textContent = msg;
+                errEl.classList.add('is-on');
+            }
+
+            function clearPhoto() {
+                photo.value = '';
+                preview.classList.remove('is-on');
+                thumb.removeAttribute('src');
+                if (previewUrl) {
+                    URL.revokeObjectURL(previewUrl);
+                    previewUrl = null;
+                }
+            }
+
+            photo.addEventListener('change', function () {
+                errEl.classList.remove('is-on');
+                var file = photo.files[0];
+
+                if (!file) { clearPhoto(); return; }
+
+                if (file.type.indexOf('image/') !== 0) {
+                    clearPhoto();
+                    showUploadError('Please choose an image file (JPG, PNG or WebP).');
+                    return;
+                }
+                if (file.size > MAX_SIZE) {
+                    clearPhoto();
+                    showUploadError('That image is larger than 5 MB. Please choose a smaller one.');
+                    return;
+                }
+
+                if (previewUrl) URL.revokeObjectURL(previewUrl);
+                previewUrl = URL.createObjectURL(file);
+                thumb.src = previewUrl;
+                nameEl.textContent = file.name;
+                sizeEl.textContent = (file.size / 1024 / 1024).toFixed(2) + ' MB';
+                preview.classList.add('is-on');
+            });
+
+            removeBtn.addEventListener('click', function () {
+                clearPhoto();
+                errEl.classList.remove('is-on');
+            });
+
+            // highlight the box while a file is dragged over it
+            ['dragenter', 'dragover'].forEach(function (ev) {
+                box.addEventListener(ev, function () { box.classList.add('is-drag'); });
+            });
+            ['dragleave', 'drop'].forEach(function (ev) {
+                box.addEventListener(ev, function () { box.classList.remove('is-drag'); });
+            });
+
+            function show(type, msg) {
+                status.className = 'form-status ' + type;
+                status.innerHTML = msg;
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                btn.disabled = true;
+                btn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+                status.className = 'form-status';
+
+                var data = new FormData(form);
+                // no photo chosen: do not send an empty file field
+                if (!photo.files.length) data.delete('attachment');
+
+                fetch(form.action, {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: data
+                })
+                    .then(function (res) { return res.json(); })
+                    .then(function (result) {
+                        if (result.success === 'true' || result.success === true) {
+                            show('is-ok', '<i class="fa-solid fa-circle-check"></i> Thank you! Your enquiry has been sent. We will get back to you soon.');
+                            form.reset();
+                            clearPhoto();
+                        } else {
+                            throw new Error('failed');
+                        }
+                    })
+                    .catch(function () {
+                        show('is-err', '<i class="fa-solid fa-circle-exclamation"></i> Sorry, something went wrong. Please try again or WhatsApp us.');
+                    })
+                    .finally(function () {
+                        btn.disabled = false;
+                        btn.innerHTML = btnHTML;
+                    });
+            });
+        })();
+    </script>
 
 
 
