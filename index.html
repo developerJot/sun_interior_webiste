@@ -66,33 +66,28 @@
       padding: 0;
     }
 
-    /* Logo */
+    /* Logo (image) */
     .brand {
+      display: inline-flex;
+      align-items: center;
+      line-height: 0;
       text-decoration: none;
-      line-height: 1;
-      display: inline-block;
+      margin-right: 0;
     }
 
-    .brand-main {
+    .brand-logo {
+      height: 64px;
+      /* desktop size */
+      width: auto;
+      /* keeps proportions */
+      max-width: 100%;
       display: block;
-      font-size: 30px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      color: var(--text);
+      transition: height .3s ease;
     }
 
-    .brand-main b {
-      color: var(--gold);
-      font-weight: 600;
-    }
-
-    .brand-sub {
-      display: block;
-      font-size: 9px;
-      letter-spacing: 6px;
-      color: var(--gold);
-      text-align: center;
-      margin-top: 3px;
+    /* logo gets smaller when the header shrinks on scroll */
+    .site-header.is-scrolled .brand-logo {
+      height: 48px;
     }
 
     /* Links */
@@ -185,6 +180,15 @@
         background: rgba(9, 7, 5, .95);
       }
 
+      /* tablet logo size */
+      .brand-logo {
+        height: 52px;
+      }
+
+      .site-header.is-scrolled .brand-logo {
+        height: 42px;
+      }
+
       .site-header .navbar-collapse {
         background: rgba(14, 11, 8, .98);
         margin-top: 14px;
@@ -218,6 +222,21 @@
         margin-top: 18px;
       }
     }
+
+    /* Small phones */
+    @media (max-width:575.98px) {
+      .brand-logo {
+        height: 44px;
+      }
+
+      .site-header.is-scrolled .brand-logo {
+        height: 38px;
+      }
+
+      .navbar-toggler {
+        margin-left: auto;
+      }
+    }
   </style>
 </head>
 
@@ -226,13 +245,16 @@
   <!-- =========================================================
      2) HEADER TAG
 ========================================================= -->
+  <!-- =========================================================
+     2) HEADER TAG
+========================================================= -->
   <header class="site-header">
     <div class="container">
       <nav class="navbar navbar-expand-lg">
 
-        <a class="brand" href="#">
-          <span class="brand-main">SUN<b>TEK</b></span>
-          <span class="brand-sub">DESIGNS</span>
+        <!-- put your logo at ./assets/logo.png -->
+        <a class="brand" href="./">
+          <img src="./assets/suntek-logo.webp" alt="Suntek Designs" class="brand-logo">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -250,16 +272,16 @@
 
             <!-- Services dropdown -->
             <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="servicesDrop" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">Services</a>
-              <ul class="dropdown-menu" aria-labelledby="servicesDrop">
-                <li><a class="dropdown-item" href="#">Residential Interiors</a></li>
-                <li><a class="dropdown-item" href="#">Office Interiors</a></li>
-                <li><a class="dropdown-item" href="#">Commercial Spaces</a></li>
-                <li><a class="dropdown-item" href="#">Modular Kitchens</a></li>
-                <li><a class="dropdown-item" href="#">Fit-out Solutions</a></li>
-              </ul>
-            </li> -->
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDrop" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Services</a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDrop">
+              <li><a class="dropdown-item" href="#">Residential Interiors</a></li>
+              <li><a class="dropdown-item" href="#">Office Interiors</a></li>
+              <li><a class="dropdown-item" href="#">Commercial Spaces</a></li>
+              <li><a class="dropdown-item" href="#">Modular Kitchens</a></li>
+              <li><a class="dropdown-item" href="#">Fit-out Solutions</a></li>
+            </ul>
+          </li> -->
 
             <!-- <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li> -->
             <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
@@ -3108,7 +3130,7 @@
           <p class="blog-eyebrow">What We Do</p>
           <h2 class="blog-title">Latest posts &amp; articles</h2>
         </div>
-        <a href="#" class="blog-all">See All Blogs <span><i class="fa-solid fa-arrow-right"></i></span></a>
+        <a href="./contact-us/" class="blog-all">Book Now <span><i class="fa-solid fa-arrow-right"></i></span></a>
       </div>
 
       <div class="blog-grid">
@@ -4536,8 +4558,7 @@
             <div class="yt-info-text">
               <span class="yt-info-label">Suntek Designs</span>
               <h3 class="yt-info-title" id="ytStageTitle">Client Testimonial | Transforming Their Home with Expert
-                Design
-                | Suntek Designs</h3>
+                Design | Suntek Designs</h3>
             </div>
             <button type="button" class="yt-share" id="ytShare" aria-label="Share this video">
               <i class="fa-solid fa-share-nodes"></i>
@@ -4545,154 +4566,10 @@
           </div>
         </article>
 
-        <!-- scrolling list (15 videos, latest first) -->
+        <!-- scrolling list (filled automatically with the channel's latest 15 videos) -->
         <aside class="yt-list" aria-label="All videos">
           <div class="yt-list-inner">
-            <ul class="yt-track" id="ytTrack">
-
-              <!-- 1 (latest) -->
-              <li><button type="button" class="yt-item" data-id="D_IBGCSDY_0"
-                  data-title="Client Testimonial | Transforming Their Home with Expert Design | Suntek Designs">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/D_IBGCSDY_0/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-tag">Latest</span><span class="yt-item-title">Client
-                      Testimonial | Transforming Their Home with Expert Design | Suntek Designs</span></span>
-                </button></li>
-
-              <!-- 2 -->
-              <li><button type="button" class="yt-item" data-id="qEEIoYVgMPk"
-                  data-title="Transforming an HDB Flat Living Room">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/qEEIoYVgMPk/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Transforming an HDB Flat Living
-                      Room</span></span>
-                </button></li>
-
-              <!-- 3 TEMP: replace id (x3) + title (x2) -->
-              <li><button type="button" class="yt-item" data-id="D_IBGCSDY_0"
-                  data-title="Client Testimonial | Transforming Their Home with Expert Design | Suntek Designs">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/D_IBGCSDY_0/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Client Testimonial | Transforming Their Home
-                      with
-                      Expert Design | Suntek Designs</span></span>
-                </button></li>
-
-              <!-- 4 TEMP -->
-              <li><button type="button" class="yt-item" data-id="qEEIoYVgMPk"
-                  data-title="Transforming an HDB Flat Living Room">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/qEEIoYVgMPk/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Transforming an HDB Flat Living
-                      Room</span></span>
-                </button></li>
-
-              <!-- 5 TEMP -->
-              <li><button type="button" class="yt-item" data-id="D_IBGCSDY_0"
-                  data-title="Client Testimonial | Transforming Their Home with Expert Design | Suntek Designs">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/D_IBGCSDY_0/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Client Testimonial | Transforming Their Home
-                      with
-                      Expert Design | Suntek Designs</span></span>
-                </button></li>
-
-              <!-- 6 TEMP -->
-              <li><button type="button" class="yt-item" data-id="qEEIoYVgMPk"
-                  data-title="Transforming an HDB Flat Living Room">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/qEEIoYVgMPk/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Transforming an HDB Flat Living
-                      Room</span></span>
-                </button></li>
-
-              <!-- 7 TEMP -->
-              <li><button type="button" class="yt-item" data-id="D_IBGCSDY_0"
-                  data-title="Client Testimonial | Transforming Their Home with Expert Design | Suntek Designs">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/D_IBGCSDY_0/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Client Testimonial | Transforming Their Home
-                      with
-                      Expert Design | Suntek Designs</span></span>
-                </button></li>
-
-              <!-- 8 TEMP -->
-              <li><button type="button" class="yt-item" data-id="qEEIoYVgMPk"
-                  data-title="Transforming an HDB Flat Living Room">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/qEEIoYVgMPk/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Transforming an HDB Flat Living
-                      Room</span></span>
-                </button></li>
-
-              <!-- 9 TEMP -->
-              <li><button type="button" class="yt-item" data-id="D_IBGCSDY_0"
-                  data-title="Client Testimonial | Transforming Their Home with Expert Design | Suntek Designs">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/D_IBGCSDY_0/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Client Testimonial | Transforming Their Home
-                      with
-                      Expert Design | Suntek Designs</span></span>
-                </button></li>
-
-              <!-- 10 TEMP -->
-              <li><button type="button" class="yt-item" data-id="qEEIoYVgMPk"
-                  data-title="Transforming an HDB Flat Living Room">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/qEEIoYVgMPk/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Transforming an HDB Flat Living
-                      Room</span></span>
-                </button></li>
-
-              <!-- 11 TEMP -->
-              <li><button type="button" class="yt-item" data-id="D_IBGCSDY_0"
-                  data-title="Client Testimonial | Transforming Their Home with Expert Design | Suntek Designs">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/D_IBGCSDY_0/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Client Testimonial | Transforming Their Home
-                      with
-                      Expert Design | Suntek Designs</span></span>
-                </button></li>
-
-              <!-- 12 TEMP -->
-              <li><button type="button" class="yt-item" data-id="qEEIoYVgMPk"
-                  data-title="Transforming an HDB Flat Living Room">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/qEEIoYVgMPk/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Transforming an HDB Flat Living
-                      Room</span></span>
-                </button></li>
-
-              <!-- 13 TEMP -->
-              <li><button type="button" class="yt-item" data-id="D_IBGCSDY_0"
-                  data-title="Client Testimonial | Transforming Their Home with Expert Design | Suntek Designs">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/D_IBGCSDY_0/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Client Testimonial | Transforming Their Home
-                      with
-                      Expert Design | Suntek Designs</span></span>
-                </button></li>
-
-              <!-- 14 TEMP -->
-              <li><button type="button" class="yt-item" data-id="qEEIoYVgMPk"
-                  data-title="Transforming an HDB Flat Living Room">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/qEEIoYVgMPk/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Transforming an HDB Flat Living
-                      Room</span></span>
-                </button></li>
-
-              <!-- 15 TEMP -->
-              <li><button type="button" class="yt-item" data-id="D_IBGCSDY_0"
-                  data-title="Client Testimonial | Transforming Their Home with Expert Design | Suntek Designs">
-                  <span class="yt-item-thumb"><img src="https://i.ytimg.com/vi/D_IBGCSDY_0/mqdefault.jpg" alt=""
-                      loading="lazy"><i class="fa-solid fa-play"></i></span>
-                  <span class="yt-item-body"><span class="yt-item-title">Client Testimonial | Transforming Their Home
-                      with
-                      Expert Design | Suntek Designs</span></span>
-                </button></li>
-
-            </ul>
+            <ul class="yt-track" id="ytTrack"></ul>
           </div>
         </aside>
 
@@ -4700,13 +4577,40 @@
     </div>
   </section>
 
-  <!-- youTube Video Show -->
+
+
+
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // false = share the video link, true = share the YouTube channel
-      var shareChannel = false;
+      // =====================================================
+      //  SETTINGS
+      // =====================================================
+      var CHANNEL_ID = 'UCfNU4eV0ez6ko5KlKs_IrTA';   // @SUNTEKDESIGNS
+      var MAX_VIDEOS = 15;                            // list never shows more than this
+      var AUTOPLAY_FIRST = false;                     // true = latest video starts playing (muted) on page load
+      var shareChannel = false;                       // false = share video link, true = share channel
       var channelUrl = 'https://www.youtube.com/@SUNTEKDESIGNS';
 
+      // =====================================================
+      //  YOUR VIDEOS (newest first) - these always show.
+      //  New uploads found on YouTube are added above the first one automatically.
+      //  If the automatic check is ever blocked, just paste the new video
+      //  as the FIRST line here (copy a line, change id + title).
+      // =====================================================
+      var VIDEOS = [
+        { id: 'GCPEK5qpmG4', title: 'They Set A New Standard | Built For Everyday Living | Singapore #singaporehomes' },
+        { id: '9iFBxqzfFCc', title: 'So Happy With My Home – Real Client Story | Singapore Interiors' },
+        { id: 'yPfE4UaU0vc', title: 'Beyond Expectations — Extremely Satisfied With Our Singapore Home' },
+        { id: 'ttAdzLrsMTE', title: 'Exclusive: What Our Client Says About Singapore Interior Design' },
+        { id: 'XEbtRUuUv5o', title: 'Suntek Designs DID THIS?! 😲 | The Most Stunning Home Transformation Yet!' },
+        { id: 'D_IBGCSDY_0', title: 'Client Testimonial | Transforming Their Home with Expert Design | Suntek Designs' },
+        { id: 'qEEIoYVgMPk', title: 'Transforming an HDB Flat Living Room | Client Testimonial | Suntek Designs Singapore' }
+      ];
+
+      // =====================================================
+      //  ELEMENTS
+      // =====================================================
       var stage = document.getElementById('ytStage');
       var playBtn = document.getElementById('ytStagePlay');
       var stageImg = document.getElementById('ytStageImg');
@@ -4717,22 +4621,79 @@
 
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var current = { id: '', title: '' };
+      var originals = [];
 
-      // number the real items, then copy the set once so the loop never ends
-      var originals = Array.prototype.slice.call(track.children);
-      originals.forEach(function (li, n) {
-        li.querySelector('.yt-item').dataset.i = n;
-      });
-      if (!reduce) {
-        originals.forEach(function (li) {
-          var copy = li.cloneNode(true);
-          copy.setAttribute('aria-hidden', 'true');
-          copy.querySelector('.yt-item').tabIndex = -1;
-          track.appendChild(copy);
+      // =====================================================
+      //  BUILD THE LIST
+      // =====================================================
+      function render(videos, autoplay) {
+        track.innerHTML = '';
+        track.style.animation = '';
+        track.style.animationDuration = '';
+        track.parentNode.style.overflowY = '';
+
+        videos.forEach(function (v, n) {
+          var li = document.createElement('li');
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'yt-item';
+          btn.dataset.id = v.id;
+          btn.dataset.title = v.title;
+          btn.dataset.i = n;
+
+          var thumb = document.createElement('span');
+          thumb.className = 'yt-item-thumb';
+          var img = document.createElement('img');
+          img.src = 'https://i.ytimg.com/vi/' + v.id + '/mqdefault.jpg';
+          img.alt = '';
+          img.loading = 'lazy';
+          var play = document.createElement('i');
+          play.className = 'fa-solid fa-play';
+          thumb.appendChild(img);
+          thumb.appendChild(play);
+
+          var body = document.createElement('span');
+          body.className = 'yt-item-body';
+          if (n === 0) {
+            var tag = document.createElement('span');
+            tag.className = 'yt-tag';
+            tag.textContent = 'Latest';
+            body.appendChild(tag);
+          }
+          var title = document.createElement('span');
+          title.className = 'yt-item-title';
+          title.textContent = v.title;
+          body.appendChild(title);
+
+          btn.appendChild(thumb);
+          btn.appendChild(body);
+          li.appendChild(btn);
+          track.appendChild(li);
         });
+
+        originals = Array.prototype.slice.call(track.children);
+
+        // endless scroll only when there are enough videos to fill the box
+        if (!reduce && videos.length >= 5) {
+          originals.forEach(function (li) {
+            var copy = li.cloneNode(true);
+            copy.setAttribute('aria-hidden', 'true');
+            copy.querySelector('.yt-item').tabIndex = -1;
+            track.appendChild(copy);
+          });
+          track.style.animationDuration = Math.max(24, videos.length * 6) + 's';
+        } else {
+          track.style.animation = 'none';
+          track.parentNode.style.overflowY = 'auto';
+        }
+
+        // the newest video (number 1) always goes into the big player
+        select(originals[0].querySelector('.yt-item'), autoplay);
       }
 
-      // big thumbnail (falls back to a smaller one if the HD one does not exist)
+      // =====================================================
+      //  PLAYER
+      // =====================================================
       function setStageImage(id) {
         stageImg.onload = function () {
           if (stageImg.naturalWidth < 200) {
@@ -4742,8 +4703,19 @@
         stageImg.src = 'https://i.ytimg.com/vi/' + id + '/maxresdefault.jpg';
       }
 
-      // select a video: show its thumbnail + red button, wait for the click to play
-      function select(btn) {
+      function playCurrent(muted) {
+        var old = stage.querySelector('iframe');
+        if (old) old.remove();
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + current.id + '?autoplay=1&rel=0' + (muted ? '&mute=1' : '');
+        iframe.title = current.title;
+        iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+        iframe.allowFullscreen = true;
+        stage.appendChild(iframe);
+        playBtn.hidden = true;
+      }
+
+      function select(btn, autoplay) {
         var old = stage.querySelector('iframe');
         if (old) old.remove();
         playBtn.hidden = false;
@@ -4758,24 +4730,16 @@
         track.querySelectorAll('.yt-item').forEach(function (b) {
           b.classList.toggle('active', b.dataset.i === btn.dataset.i);
         });
+
+        if (autoplay) playCurrent(true);   // browsers only allow muted autoplay
       }
 
-      // play only when the red button is clicked
-      playBtn.addEventListener('click', function () {
-        var iframe = document.createElement('iframe');
-        iframe.src = 'https://www.youtube-nocookie.com/embed/' + current.id + '?autoplay=1&rel=0';
-        iframe.title = current.title;
-        iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
-        iframe.allowFullscreen = true;
-        stage.appendChild(iframe);
-        playBtn.hidden = true;
-      });
+      playBtn.addEventListener('click', function () { playCurrent(false); });
 
-      // click a video in the list
       track.addEventListener('click', function (e) {
         var btn = e.target.closest('.yt-item');
         if (!btn) return;
-        select(btn);
+        select(btn, false);
 
         // on phones/tablets the player is above the list, so bring it into view
         if (window.innerWidth < 992) {
@@ -4786,7 +4750,6 @@
         }
       });
 
-      // share: phone share sheet, or copy the link on desktop
       shareBtn.addEventListener('click', function () {
         var url = shareChannel ? channelUrl : 'https://youtu.be/' + current.id;
         var title = current.title;
@@ -4812,11 +4775,78 @@
         }
       });
 
-      // first video is selected by default
-      select(originals[0].querySelector('.yt-item'));
+      // =====================================================
+      //  CHECK YOUTUBE FOR NEW UPLOADS
+      // =====================================================
+      var feed = 'https://www.youtube.com/feeds/videos.xml?channel_id=' + CHANNEL_ID;
+
+      function fromRss2json() {
+        return fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feed))
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (!d || d.status !== 'ok' || !d.items || !d.items.length) throw new Error('empty');
+            return d.items.map(function (item) {
+              var m = (item.link || '').match(/[?&]v=([\w-]{11})/);
+              return { id: m ? m[1] : (item.guid || '').replace('yt:video:', ''), title: item.title };
+            });
+          });
+      }
+
+      function fromProxy(proxyUrl) {
+        return fetch(proxyUrl)
+          .then(function (r) { return r.text(); })
+          .then(function (txt) {
+            var xml = new DOMParser().parseFromString(txt, 'text/xml');
+            var entries = xml.getElementsByTagName('entry');
+            var list = [];
+            for (var i = 0; i < entries.length; i++) {
+              var idNode = entries[i].getElementsByTagName('yt:videoId')[0];
+              var titleNode = entries[i].getElementsByTagName('title')[0];
+              if (idNode && titleNode) list.push({ id: idNode.textContent, title: titleNode.textContent });
+            }
+            if (!list.length) throw new Error('empty');
+            return list;
+          });
+      }
+
+      function getFeed() {
+        return fromRss2json()
+          .catch(function () { return fromProxy('https://api.allorigins.win/raw?url=' + encodeURIComponent(feed)); })
+          .catch(function () { return fromProxy('https://corsproxy.io/?' + encodeURIComponent(feed)); });
+      }
+
+      // videos in the feed that are NEWER than the newest video in your list
+      function findNew(feedVideos) {
+        var known = {};
+        VIDEOS.forEach(function (v) { known[v.id] = true; });
+
+        var fresh = [];
+        for (var i = 0; i < feedVideos.length; i++) {
+          if (known[feedVideos[i].id]) break;   // reached a video you already have
+          fresh.push(feedVideos[i]);
+        }
+        return fresh;
+      }
+
+      // =====================================================
+      //  START
+      // =====================================================
+      // 1) show your list straight away (number 1 = first line in VIDEOS)
+      render(VIDEOS.slice(0, MAX_VIDEOS), AUTOPLAY_FIRST);
+
+      // 2) check YouTube; if there are new uploads, put them on top
+      getFeed().then(function (feedVideos) {
+        var fresh = findNew(feedVideos);
+        if (!fresh.length) return;
+
+        var merged = fresh.concat(VIDEOS).slice(0, MAX_VIDEOS);   // new on top, old shift down, oldest drops off
+        var alreadyPlaying = !!stage.querySelector('iframe');
+        render(merged, AUTOPLAY_FIRST && !alreadyPlaying);
+      }).catch(function (err) {
+        console.warn('Could not check YouTube for new videos:', err);
+      });
     });
   </script>
-
 
 
 
@@ -5628,7 +5658,7 @@
         <!-- brand -->
         <div class="col-12 col-lg-4">
           <!-- replace ./assets/logo.png with your logo image -->
-          <a href="#" class="footer-logo"><img src="./assets/logo.png" alt="Suntek Designs"></a>
+          <a href="#" class="footer-logo"><img src="./assets/suntek-logo.webp" alt="Suntek Designs"></a>
           <p class="footer-about">
             With over 16 years of excellence, Suntek Designs—part of the Suntek Groups—is your
             trusted partner for high-end interior design solutions across residential,

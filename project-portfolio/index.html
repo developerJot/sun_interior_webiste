@@ -14,9 +14,7 @@
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- =========================================================
-     1) HEADER STYLE  (same as other pages)
-========================================================= -->
+    <!-- header code -->
     <style>
         html {
             scroll-padding-top: 80px;
@@ -29,6 +27,7 @@
         :root {
             --gold: #e9a84f;
             --gold-soft: #f3c982;
+            /* --ink: #0c0a08; */
             --ink: #000b0f;
             --text: #f4efe8;
         }
@@ -51,6 +50,7 @@
             transition: padding .3s ease, background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
         }
 
+        /* added by the script after scrolling */
         .site-header.is-scrolled {
             padding: 10px 0;
             background: rgba(9, 7, 5, .92);
@@ -64,34 +64,31 @@
             padding: 0;
         }
 
+        /* Logo (image) */
         .brand {
+            display: inline-flex;
+            align-items: center;
+            line-height: 0;
             text-decoration: none;
-            line-height: 1;
-            display: inline-block;
+            margin-right: 0;
         }
 
-        .brand-main {
+        .brand-logo {
+            height: 64px;
+            /* desktop size */
+            width: auto;
+            /* keeps proportions */
+            max-width: 100%;
             display: block;
-            font-size: 30px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            color: var(--text);
+            transition: height .3s ease;
         }
 
-        .brand-main b {
-            color: var(--gold);
-            font-weight: 600;
+        /* logo gets smaller when the header shrinks on scroll */
+        .site-header.is-scrolled .brand-logo {
+            height: 48px;
         }
 
-        .brand-sub {
-            display: block;
-            font-size: 9px;
-            letter-spacing: 6px;
-            color: var(--gold);
-            text-align: center;
-            margin-top: 3px;
-        }
-
+        /* Links */
         .site-header .nav-link {
             color: var(--text);
             font-size: 15px;
@@ -110,6 +107,7 @@
             border-bottom-color: var(--gold);
         }
 
+        /* Services dropdown */
         .site-header .dropdown-menu {
             background: rgba(18, 14, 10, .97);
             border: 1px solid rgba(233, 168, 79, .3);
@@ -131,6 +129,7 @@
             color: var(--gold);
         }
 
+        /* Quote button */
         .btn-quote {
             color: var(--text);
             border: 1px solid var(--gold);
@@ -146,6 +145,7 @@
             color: #1a1209;
         }
 
+        /* Toggler */
         .navbar-toggler {
             border: 1px solid var(--gold);
             padding: 6px 10px;
@@ -159,12 +159,14 @@
             filter: invert(1);
         }
 
+        /* Desktop: open dropdown on hover */
         @media (min-width:992px) {
             .site-header .dropdown:hover>.dropdown-menu {
                 display: block;
             }
         }
 
+        /* Mobile / tablet: collapsed menu panel */
         @media (max-width:991.98px) {
             .site-header {
                 background: rgba(0, 0, 0, .85);
@@ -174,6 +176,15 @@
             .site-header.is-scrolled {
                 padding: 10px 0;
                 background: rgba(9, 7, 5, .95);
+            }
+
+            /* tablet logo size */
+            .brand-logo {
+                height: 52px;
+            }
+
+            .site-header.is-scrolled .brand-logo {
+                height: 42px;
             }
 
             .site-header .navbar-collapse {
@@ -209,21 +220,34 @@
                 margin-top: 18px;
             }
         }
+
+        /* Small phones */
+        @media (max-width:575.98px) {
+            .brand-logo {
+                height: 44px;
+            }
+
+            .site-header.is-scrolled .brand-logo {
+                height: 38px;
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- =========================================================
-     2) HEADER TAG  (same as other pages)
-========================================================= -->
+    <!-- header code -->
     <header class="site-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
 
-                <a class="brand" href="index.html">
-                    <span class="brand-main">SUN<b>TEK</b></span>
-                    <span class="brand-sub">DESIGNS</span>
+                <!-- put your logo at ./assets/logo.png -->
+                <a class="brand" href="./">
+                    <img src="../assets/suntek-logo.webp" alt="Suntek Designs" class="brand-logo">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -240,16 +264,16 @@
 
                         <!-- Services dropdown -->
                         <!-- <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="servicesDrop" role="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                                            <ul class="dropdown-menu" aria-labelledby="servicesDrop">
-                                                <li><a class="dropdown-item" href="#">Residential Interiors</a></li>
-                                                <li><a class="dropdown-item" href="#">Office Interiors</a></li>
-                                                <li><a class="dropdown-item" href="#">Commercial Spaces</a></li>
-                                                <li><a class="dropdown-item" href="#">Modular Kitchens</a></li>
-                                                <li><a class="dropdown-item" href="#">Fit-out Solutions</a></li>
-                                            </ul>
-                                        </li> -->
+                                                        <a class="nav-link dropdown-toggle" href="#" id="servicesDrop" role="button"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                                                        <ul class="dropdown-menu" aria-labelledby="servicesDrop">
+                                                            <li><a class="dropdown-item" href="#">Residential Interiors</a></li>
+                                                            <li><a class="dropdown-item" href="#">Office Interiors</a></li>
+                                                            <li><a class="dropdown-item" href="#">Commercial Spaces</a></li>
+                                                            <li><a class="dropdown-item" href="#">Modular Kitchens</a></li>
+                                                            <li><a class="dropdown-item" href="#">Fit-out Solutions</a></li>
+                                                        </ul>
+                                                    </li> -->
 
                         <li class="nav-item"><a class="nav-link active" href="../project-portfolio/">Portfolio</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
@@ -262,7 +286,6 @@
             </nav>
         </div>
     </header>
-
 
 
 
@@ -2018,7 +2041,8 @@
 
                 <!-- brand -->
                 <div class="col-12 col-lg-4">
-                    <a href="index.html" class="footer-logo"><img src="./assets/logo.png" alt="Suntek Designs"></a>
+                    <a href="index.html" class="footer-logo"><img src="../assets/suntek-logo.webp"
+                            alt="Suntek Designs"></a>
                     <p class="footer-about">
                         With over 16 years of excellence, Suntek Designs—part of the Suntek Groups—is your
                         trusted partner for high-end interior design solutions across residential,

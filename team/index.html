@@ -14,9 +14,9 @@
       ========================================================= -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- =========================================================
-     1) HEADER STYLE  (same as index.html)
-========================================================= -->
+
+
+    <!-- header code -->
     <style>
         html {
             scroll-padding-top: 80px;
@@ -66,33 +66,28 @@
             padding: 0;
         }
 
-        /* Logo */
+        /* Logo (image) */
         .brand {
+            display: inline-flex;
+            align-items: center;
+            line-height: 0;
             text-decoration: none;
-            line-height: 1;
-            display: inline-block;
+            margin-right: 0;
         }
 
-        .brand-main {
+        .brand-logo {
+            height: 64px;
+            /* desktop size */
+            width: auto;
+            /* keeps proportions */
+            max-width: 100%;
             display: block;
-            font-size: 30px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            color: var(--text);
+            transition: height .3s ease;
         }
 
-        .brand-main b {
-            color: var(--gold);
-            font-weight: 600;
-        }
-
-        .brand-sub {
-            display: block;
-            font-size: 9px;
-            letter-spacing: 6px;
-            color: var(--gold);
-            text-align: center;
-            margin-top: 3px;
+        /* logo gets smaller when the header shrinks on scroll */
+        .site-header.is-scrolled .brand-logo {
+            height: 48px;
         }
 
         /* Links */
@@ -185,6 +180,15 @@
                 background: rgba(9, 7, 5, .95);
             }
 
+            /* tablet logo size */
+            .brand-logo {
+                height: 52px;
+            }
+
+            .site-header.is-scrolled .brand-logo {
+                height: 42px;
+            }
+
             .site-header .navbar-collapse {
                 background: rgba(14, 11, 8, .98);
                 margin-top: 14px;
@@ -218,21 +222,34 @@
                 margin-top: 18px;
             }
         }
+
+        /* Small phones */
+        @media (max-width:575.98px) {
+            .brand-logo {
+                height: 44px;
+            }
+
+            .site-header.is-scrolled .brand-logo {
+                height: 38px;
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- =========================================================
-     2) HEADER TAG  (same as index.html)
-========================================================= -->
+    <!-- header code -->
     <header class="site-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
 
-                <a class="brand" href="index.html">
-                    <span class="brand-main">SUN<b>TEK</b></span>
-                    <span class="brand-sub">DESIGNS</span>
+                <!-- put your logo at ./assets/logo.png -->
+                <a class="brand" href="./">
+                    <img src="../assets/suntek-logo.webp" alt="Suntek Designs" class="brand-logo">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -1378,7 +1395,8 @@
                 <!-- brand -->
                 <div class="col-12 col-lg-4">
                     <!-- replace ./assets/logo.png with your logo image -->
-                    <a href="index.html" class="footer-logo"><img src="./assets/logo.png" alt="Suntek Designs"></a>
+                    <a href="index.html" class="footer-logo"><img src="../assets/suntek-logo.webp"
+                            alt="Suntek Designs"></a>
                     <p class="footer-about">
                         With over 16 years of excellence, Suntek Designs—part of the Suntek Groups—is your
                         trusted partner for high-end interior design solutions across residential,
